@@ -1,0 +1,95 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body {
+			background: #f4f4f4;
+		}
+		.card {
+			margin: 50px;
+			float: left;
+			background: #fff;
+			box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, .05),
+				5px 5px 10px 10px rgba(0, 0, 0, 0.05);
+			border: 1px solid #eee;
+			width: 300px;
+			height: 450px;
+			border-radius: 20px;
+			position: relative;
+		}
+
+		.heart {
+			width: 40px;
+			height: 40px;
+			background-color: #d44;
+			transform: rotate(45deg);
+			top: 50%;
+			left: 50%;
+			position: absolute;
+			margin-left: -20px;
+			margin-top: -20px;
+		}
+
+		.heart::before,
+		.heart::after {
+			content: '';
+			display: block;
+			background-color: #d44;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			position: absolute;
+			top: -50%;
+			left: 0;
+		}
+
+		.heart::after {
+			top: 0;
+			left: -50%;
+		}
+
+		.ace-top,
+		.ace-bottom {
+			color: #d44;
+			font-weight: bold;
+			position: absolute;
+			font-size: 24px;
+		}
+
+		.ace-top .heart,
+		.ace-bottom .heart {
+			width: 10px;
+			height: 10px;
+			margin-left: -5px;
+			margin-top: 20px;
+		}
+
+		.ace-top {
+			top: 15px;
+			left: 15px;
+		}
+
+		.ace-bottom {
+			bottom: 15px;
+			right: 15px;
+			transform: rotate(180deg);
+		}
+	</style>
+</head>
+<body>
+	<h1>codepen solution by Rybak</h1>
+	<div class="card">
+		<div class="ace-top">A
+			<div class="heart"></div>
+		</div>
+		<div class="heart"></div>
+		<div class="ace-bottom">A
+			<div class="heart"></div>
+		</div>
+	</div>
+</body>
+
+</html>

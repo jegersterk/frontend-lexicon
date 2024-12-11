@@ -1,0 +1,89 @@
+/* reset */
+* {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+  }
+  
+  /* global styles */
+  :root {
+	--clr-primary-400: hsl(213, 84%, 40%);
+	--clr-primary-800: hsl(213, 54%, 80%);
+	--clr-primary-900: hsl(213, 34%, 87%);
+	
+	--clr-neutral-100: hsl(0, 9%, 7%);
+	--clr-neutral-300: hsl(0, 9%, 27%);
+	--clr-neutral-800: hsl(0, 9%, 94%);
+	--clr-neutral-900: hsl(0, 9%, 97%);
+	
+	--fs-large: 1.5rem;
+	--fw-bold: 800;
+  }
+  
+  body {
+	background-color: var(--clr-primary-800);
+	line-height: 1.5;
+  }
+  
+  h1, h2 {
+	line-height: 1.1;
+  }
+  
+  h2 {
+	  font-size: var(--fs-large);
+  }
+  
+  /* Block styles */
+  .card {
+	border: 1px solid var(--clr-neutral-800);
+	border-radius: 1rem;
+	padding: 2rem;
+	background: var(--clr-neutral-900);
+  }
+  
+  .button {
+	border: none;
+	cursor: pointer;
+	
+	padding: .5rem 1rem;
+	font-size: 1em;
+	background-color: var(--clr-primary-900);
+  }
+  
+  /* Composition (Layout) styles */
+  .flow > * + * {
+	margin-block-start: var(--flow-space, 1em);
+  }
+  
+  /* Utility styles */
+  .bold {
+	font-weight: var(--fw-bold);
+  }
+  
+  .italic {
+	font-style: italic;
+  }
+  
+  .rounded-sm {
+	border-radius: .5rem; 
+  }
+  
+  .highlighted {
+	background-color: var(--clr-neutral-800);
+  }
+  
+  .flex {
+	display: flex;
+	gap: var(--grid-gap, 1rem);
+  }
+  
+  .p-1 {
+	padding: 1rem;
+  }
+  
+  /* Exceptions */
+  .button[data-type="primary"] {
+	background-color: var(--clr-primary-400);
+	color: var(--clr-neutral-900);
+  }
+  

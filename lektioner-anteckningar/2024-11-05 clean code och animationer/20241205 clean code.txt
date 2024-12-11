@@ -1,0 +1,8 @@
+BEM = Block Element Modifier
+CUBE = Composition, Utility, Block, Exception
+Tailwind: Styling utan att skriva CSS
+
+Finns många. 
+SMACSS = Scalable and Modular Architecture for CSS
+SUIT = Style tools for UI components
+Atomizer

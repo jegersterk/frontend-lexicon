@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body{
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			justify-content: center;
+			align-items: center;
+			background-color: bisque;
+		}
+		main{
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			margin-top: 10%;
+		}
+		.box{
+			display: flex;
+			background-color: rgb(181, 143, 98);
+			width: 400px;
+			height: 40px;
+		}
+		.box1{
+			flex-direction: row;
+		}
+		.box2{
+			flex-direction: row-reverse;
+		}
+		.fib{
+			color: white;
+		}
+		.fib:nth-child(1){
+			flex-grow: 1;
+			background-color: rgb(100,0,0)
+		}
+		.fib:nth-child(2){
+			flex-grow: 1;
+			background-color: rgb(100,20,0)
+		}
+		.fib:nth-child(3){
+			flex-grow: 1;
+			background-color: rgb(100,40,0)
+		}
+		.fib:nth-child(4){
+			flex-grow: 2;
+			background-color: rgb(100,60,0)
+		}
+		.fib:nth-child(5){
+			flex-grow: 3;
+			background-color: rgb(100,80,0)
+		}
+		.fib:nth-child(6){
+			flex-grow: 5;
+			background-color: rgb(100,100,0)
+		}
+		.fib:nth-child(7){
+			flex-grow: 8;
+			background-color: rgb(100,120,0)
+		}
+		.fib:nth-child(8){
+			flex-grow: 13;
+			background-color: rgb(100,140,0)
+		}
+		.fib:nth-child(9){
+			flex-grow: 21;
+			background-color: rgb(100,160,0)
+		}
+		.fib:nth-child(10){
+			flex-grow: 34;
+			background-color: rgb(100,180,0)
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<div class="box box1">
+			<div class="fib">0</div>
+			<div class="fib">1</div>
+			<div class="fib">1</div>
+			<div class="fib">2</div>
+			<div class="fib">3</div>
+			<div class="fib">5</div>
+			<div class="fib">8</div>
+			<div class="fib">13</div>
+			<div class="fib">21</div>
+			<div class="fib">34</div>
+		</div>
+		<div class="box box2">
+			<div class="fib">0</div>
+			<div class="fib">1</div>
+			<div class="fib">1</div>
+			<div class="fib">2</div>
+			<div class="fib">3</div>
+			<div class="fib">5</div>
+			<div class="fib">8</div>
+			<div class="fib">13</div>
+			<div class="fib">21</div>
+			<div class="fib">34</div>
+		</div>
+	</main>
+</body>
+</html>

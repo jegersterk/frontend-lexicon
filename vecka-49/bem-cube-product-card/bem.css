@@ -1,0 +1,60 @@
+/* Block styles */
+body {
+	background-color: hsl(213, 54%, 80%);
+	line-height: 1.5;
+  }
+  
+  .card {
+	border: 1px solid hsl(0, 0%, 80%);
+	border-radius: 0.5rem;
+	padding: 2rem;
+	background-color: hsl(0, 0%, 100%);
+  }
+  
+  /* Element styles */
+  .card__header {
+	margin-bottom: 1rem;
+  }
+  
+  .card__footer {
+	 display: flex;
+	gap: 1rem;
+	padding: 1rem;
+  }
+  
+  .card__title {
+	font-size: 1.5rem;
+  }
+  
+  .card__body {
+	margin-bottom: 1rem;
+  }
+  
+  .card__text {
+	font-size: 1rem;
+	color: hsl(0, 0%, 40%);
+  }
+  
+  /* Modifier styles */
+  .card__footer--highlighted {
+	background-color: hsl(0, 0%, 94%);
+  }
+  
+  .card__button {
+	background-color: hsl(213, 34%, 87%);
+	color: hsl(0, 0%, 0%);
+	border: none;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+	border-radius: .5rem; 
+  }
+  
+  .card__button--primary {
+	background-color: hsl(214, 100%, 50%);
+	color: hsl(0, 0%, 100%);
+	border: none;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+	border-radius: .5rem; 
+  }
+  

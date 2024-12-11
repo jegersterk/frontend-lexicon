@@ -1,0 +1,41 @@
+/* styles.css */
+
+/* Deklarera CSS-variabler i :root */
+:root {
+  --primary-color: #3498db;
+  /* --primary-color: #e74c3c; */
+  --secondary-color: #2ecc71;
+  --light-color: #c7c7c7;
+  --dark-color: #444444;
+  --dark-mode-bg: #c7c7c7;
+  --font-size-base: 3vw;
+  --font-family-heading: "Arial, sans-serif";
+  --font-family-body: "Verdana, sans-serif";
+}
+
+body {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-base);
+  color: var(--primary-color);
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  font-family: var(--font-family-heading);
+  color: var(--secondary-color);
+}
+
+p {
+  line-height: 1.5;
+}
+
+.light{
+	color: var(--dark-color);
+	background-color: var(--light-color);
+}
+
+.dark{
+	color: var(--light-color);
+	background-color: var(--dark-color);
+}

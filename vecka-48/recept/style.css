@@ -1,0 +1,146 @@
+html{
+	background-color: #A100004D;
+	width: 100%;
+	max-width: 1900px;
+	font-family: sans-serif;
+	font-family: "Open Sans", sans-serif;
+	--children_spacing_size: 15px;
+}
+
+body{
+	background-color: #FCFCFC;
+	width: 100%;
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: 32px;
+}
+
+main{
+	display: flex;
+	flex-direction: column;
+	padding: 5%;
+	/* padding-top: 5.5%;
+	padding-bottom: 5.5%; */
+}
+
+header{
+	width: 100%;
+	height: 100%;
+	max-width: 1280px;
+	max-height: 500px;
+}
+
+header img{
+	width: 100%;
+	height: 100%;
+}
+
+.inbetween{
+	margin-top: var(--children_spacing_size);
+	margin-bottom: var(--children_spacing_size);
+}
+
+h1{
+	color: #A10000;
+	font-size: 40px;
+	margin-top: 0px;
+	margin-bottom: var(--children_spacing_size);
+}
+
+blockquote{
+	background-color: #EBEBEB;
+	padding: 24px;
+	margin-left: 0;
+}
+
+blockquote p{
+	margin: auto;
+	font-size: 24px;
+}
+
+li{
+	font-size: 24px;
+	font-weight: 400;
+}
+
+h2{
+	font-size: 32;
+	font-weight: 700;
+	margin: 0%;
+}
+
+div.bottom{
+	display: flex;
+	height: 531px;
+	margin-top: var(--children_spacing_size);
+	margin-bottom: 0px;
+	flex-direction: column;
+}
+
+div.bottom h2{
+	margin-bottom: auto;
+}
+
+div.pics{
+	display: flex;
+}
+
+div.pics img[src="images/med-apelsin564.jpg"]{
+	margin-left: auto;
+}
+
+@media (max-width: 600px) {
+	div.pics{
+        /* flex-wrap: nowrap; */
+		flex-wrap: wrap;
+        flex-direction: column;
+        height: fit-content;
+    }
+ 
+    .bottom-pics{
+        /* padding: 5px; */
+        zoom: 50%;
+        width: 100%;
+        /* height: 80vh; */
+		/* height: 100%; */
+    }
+}
+
+
+/* emmas förslag: */
+
+/* 
+@media (max-width: 440px) {
+ 
+    .container-div {
+        max-width: fit-content;
+        min-height: 100vh;
+        background-color: white;
+    }
+ 
+    .recipe-wrapper {
+        margin: 2rem;
+    }
+ 
+    .header-img {
+        width: 100vw;
+        padding: 0;
+    }
+ 
+    .serving-suggestion-container {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        height: fit-content;
+    }
+ 
+    .serving-suggestion-imgs {
+        padding: 5px;
+        zoom: 50%;
+        width: 100%;
+        height: 80vh;
+    }
+ 
+} */
+ 

@@ -1,0 +1,100 @@
+:root{
+	--spin-point: 50% 10%
+	--spin-point-clock: 50% 1000%
+}
+
+body{
+	background-color: bisque;
+}
+
+.big-square{
+	margin: 0 auto;
+	background-color: rgb(210, 210, 210);
+	width: 400px;
+	height: 400px;
+}
+
+.square{
+	background-color: brown;
+	width: 20px;
+	height: 20px;
+	animation: cornering 4s infinite;
+}
+
+@keyframes cornering{
+	0%{transform:translate(0px,0px)}
+	25%{transform:translate(380px,0px); background-color: #00A0D6;}
+	50%{transform:translate(380px,380px); background-color: #111111;}
+	75%{transform:translate(0px,380px); background-color: #008d00;}
+	100%{transform:translate(00px,0px)}
+}
+
+.spinner{
+	background-color: rgb(248, 66, 11);
+	margin: 0 auto; 
+	width: 8px;
+	height: 50px;
+	top: 10px;
+	border-top-left-radius: 50% 12.5%;
+	border-top-right-radius: 50% 12.5%;
+	border-bottom-left-radius: 50% 12.5%;
+	border-bottom-right-radius: 50% 12.5%;
+	animation: spin 3s infinite linear;
+}
+
+@keyframes spin{
+	0%{transform:rotate(0deg);transform-origin: var(--spin-point);}
+	100%{transform:rotate(360deg);transform-origin: var(--spin-point);}
+}
+
+/* @keyframes spin{
+	to{
+		rotate: 360deg;
+	}
+} */
+
+.clock{
+	/* display: flex; */
+	box-sizing: border-box;
+	background-color: #bbbbbb;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	/* border: solid #3a7083 5px; */
+	/* justify-content: center;
+	align-items: center; */
+	/* margin: 0 auto; */
+}
+
+.center{
+	/* display: flex; */
+	position: relative;
+	background-color: #111111;
+	margin: 0%;
+	width: 8%;
+	height: 8%;
+	top: 50%;
+	left: 50%;
+	top: 47.5%;
+	left: 47.5%;
+	border-radius: 50%;
+}
+
+.seconds{
+	position: relative;
+	/* position: absolute; */
+	width: 2px;
+	height: 45px;
+	background-color: rgb(196, 0, 0);
+	animation: time 4s infinite linear;
+	/* margin: auto; */
+	top: 50%;
+  	left: 50%;
+  	transform-origin: 50% 100%;
+  	/* transform: translateX(-50%) translateY(-100%); */
+}
+
+@keyframes time{
+	0%{transform:rotate(0deg); transform-origin: 100% 0%}
+	100%{transform:rotate(360deg); transform-origin: 0 0}
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Övningar</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Övningar</h1>
+	<section class="light">
+		<h2>övning 1</h2>
+		<p>some text</p>
+		<button onclick="modeChanger()">change mode</button>
+	</section>
+	<section>
+		<h2>övning 2</h2>
+		<p>text</p>
+	</section>
+	<script>
+		const btn = document.querySelector("button")
+		const sec = document.querySelector("section")
+		function modeChanger(){
+			sec.classList.toggle("dark")
+		}
+	</script>
+  </body>
+</html>

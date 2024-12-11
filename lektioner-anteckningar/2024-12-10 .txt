@@ -1,0 +1,20 @@
+Rent tekniskt är flexbox en låda med riktning med flex-start och flex-end.
+row, row-reverse, column, column-reverse kontrollerar riktning.
+
+Detta är default (row):
+	  flex-start-center-flex-end
+flex-start ------------------------>
+center	   ------------------------>
+flex-end   ------------------------>
+
+justify-content är horisontelt
+align-items är verticalt
+
+om align-items inte funkar, inte bestämd parent height
+
+använd padding för parent, margin för child
+för vidare justering
+justify-content:
+space-between 0---0---0
+space-around  --0--0--0--
+space-evenly

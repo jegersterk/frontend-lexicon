@@ -1,0 +1,40 @@
+
+body{
+	font-family: sans-serif;
+	background-color: black;
+	width: 100%;
+	max-width: 100vw;
+	margin: 0%;
+	padding: 0%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+header{
+	display: flex;
+	background-color: #3DE07E;
+	width: 100%;
+	height: 20rem;
+	align-items: center;
+	justify-content: center;
+}
+h1{
+	text-align: center;
+	font-size: 3rem;
+}
+main{
+	display: flex;
+	margin: 0%;
+	background-color: #363636;
+	width: 100%;
+	padding: 5rem;
+	justify-content: center;
+}
+section{
+	background-color: #110083;
+	width: 80%;
+}
+footer{
+	background-color: #FFFFFF33;
+	width: 100%;
+}

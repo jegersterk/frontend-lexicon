@@ -1,0 +1,13 @@
+1. skiss (analogt)
+2. XD / Figma / Ps / Penpot (digital mockup)
+3. block -> containers -> elements (kod)
+
+koda utifrån och in! och koda klart innan du går vidare
+
+block är de stora delarna på sidan (header, main, footer grid-containters). Ofta med max-width.
+
+containers är innehållsboxarna (aside, nav, grid-items). Är ofta flexbox, dynamiska. Helst ska man inte ha containers i containers. Inordnade i gridsystemet.
+
+elements är elementen i containers (h1, p, button, img), som är minsta beståndsdelen. Nästan alltid med flexbox. 
+
+blockar man upp på detta sätt blir strukturen bättre, mindre kod, mer lättläst kod och mindre undantag.

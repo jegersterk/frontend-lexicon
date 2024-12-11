@@ -1,0 +1,46 @@
+Web Content Accessibility Guidelines (WCAG)
+Web Accessibility Initiative (WAI)
+EN 301 549.
+
+eu tillgänglighetsdirektivet 2025
+lär dig det så får du jobb!
+
+aria labels?
+
+Vissa features var i början tillgänglighetsfeatures
+men som sedan blev features.
+
+Vissa tillgänglighetsfeatures som redan finns och
+som du inte tänker på? Ge exempel.
+- inbyggd tillgänglighet i html
+- skärmläsare
+- subtitles
+
+nedsatt vs ned... vs miljö...
+
+"Designing with constraints in mind is simply 
+designing well."
+
+
+gruppuppgift
+hemsida: discord.com
+Keyboard checks
+Is the tabbing order logical and intuitive?
+- yes, it goes from left to right, top to down.
+
+Is the keyboard focus indicator always visible?
+- Yes for all items it has light blue frame but
+not for the embedded videos
+
+Can you get stuck in an element that shouldn't trap focus?
+- no, once bottom of page has been reached it circles back
+to top of page.
+
+Can you navigate behind or around an element that should be trapping focus?
+- no clickable elements are skipped
+
+When closing an element that received focus, did the focus indicator return to a logical place?
+
+Visual checks
+Are there color contrast issues that an automated tool could not pick up, such as text on top of a gradient or image?
+- 

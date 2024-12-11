@@ -1,0 +1,47 @@
+body{
+	background-color: aquamarine;
+}
+
+p{
+	color:hotpink;
+}
+
+nav{
+	text-align: center;
+	padding: 20px 0;
+}
+
+.rainbow-menu{
+	padding: 20px 20px;
+	border-radius: 5px;
+	margin: 0 auto;
+}
+
+ul{
+	list-style-type: none;
+}
+
+.rainbow-menu li:nth-child(1){
+	background-color: red;
+	animation-delay: 0s;
+}
+.rainbow-menu li:nth-child(2){
+	background-color: orange;
+	animation-delay: 0.2s;
+}
+.rainbow-menu li:nth-child(3){
+	background-color: yellow;
+	animation-delay: 0.4s;
+}
+.rainbow-menu li:nth-child(4){
+	background-color: green;
+	animation-delay: 0.6s;
+}
+.rainbow-menu li:nth-child(5){
+	background-color: blueviolet;
+	animation-delay: 0.8s;
+}
+
+.rainbow-menu li:nth-child(1):hover{
+	background-color: aquamarine;
+}
