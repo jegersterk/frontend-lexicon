@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>card experiments</title>
+	<style>
+		body{
+			background-color: rgb(91, 91, 91);
+		}
+		.card{
+			background-color: black;
+			width: 100%;
+			max-width: 300px;
+			aspect-ratio: 3/5;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		.card--img{
+			background-color: black;
+			width: 100%;
+		}
+		.card--text{
+			color: white;
+		}
+		.card--title{
+			font-size: 1.5em;
+		}
+		.card--btn{
+			/* position: relative; */
+			bottom: 50;
+			background-color: #E83F57;
+			border-radius: 0.2em;
+			border: none;
+			padding: 2%;
+			align-self: flex-start;
+			justify-self: end;
+			/* margin-bottom: auto; */
+			/* margin-top: auto; */
+		}
+	</style>
+</head>
+<body>
+	<div class="card">
+		<img class="card--img" src="assets/char-1.png" alt="">
+		<h3 class="card--title card--text">Austronaut</h3>
+		<p class="card--desc card--text">
+			Marfa artisan pok pok, coloring book shaman
+			intelligentsia meh kinfolk affogato raw 
+			denim direct trade subway tile kombucha.
+			</p>
+		<button class="card--btn card--text">Oh, take my money!</button>
+	</div>
+</body>
+</html>

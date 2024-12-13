@@ -1,0 +1,87 @@
+body{
+	background-color: bisque;
+	width: 100%;
+	max-width: 1000px;
+}
+table{
+	margin-left: auto;
+	margin-right: auto;
+}
+table *{
+	/* border: solid; */
+	text-align: center;
+}
+.notes{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	width: 400px;
+}
+.flex{
+	background-color: black;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	border: solid 4px;
+	width: 400px;
+	display: flex;
+}
+.flex *{
+	color: aliceblue;
+	background-color: blueviolet;
+	margin: 4px;
+	flex: 1 0 auto;
+
+}
+.flex .special{
+	flex: 2 1 auto;
+}
+
+.flex-holygrail{
+	background-color: black;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	/* border: solid 4px; */
+	width: 400px;
+	display: flex;
+}
+.flex-holygrail *{
+	color: aliceblue;
+	background-color: rgb(214, 86, 0);
+	border: solid rgb(143, 127, 0);
+	/* outline: 1px; */
+	margin: 4px;
+	flex: 1 1 auto;
+}
+.horizontal-layout{
+
+}
+.grid-holygrail{
+	border: 0.25rem solid purple;
+	color: white;
+	text-align: center;
+	background-color: green;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	width: 400px;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-template-areas: 
+	"header header header"
+	"nav main aside"
+	"footer footer footer" ;
+	/* grid-template-columns: repeat(3,1fr); */
+}
+
+.grid-holygrail *{
+	border: 0.25rem solid purple;
+	/* outline: 0.25rem solid purple; */
+}
+header.grid-item{grid-area: header;}
+nav.grid-item{grid-area: nav;}
+main.grid-item{grid-area: main;}
+aside.grid-item{grid-area: aside;}
+footer.grid-item{grid-area: footer;}

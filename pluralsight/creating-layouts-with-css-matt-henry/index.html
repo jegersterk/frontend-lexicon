@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<table>
+		<caption style="font-weight: bold;">
+			justify and align properties
+		</caption>
+		<thead>
+		  <tr>
+			<th scope="col">CSS</th>
+			<th scope="col">Set on</th>
+			<th scope="col">Controls</th>
+			<th scope="col">Axis</th>
+			<th scope="col">Default value</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr>
+			<th scope="row">justify-content</th>
+			<td>container</td>
+			<td>container area</td>
+			<td>main</td>
+			<td>start</td>
+		  </tr>
+		  <tr>
+			<th scope="row">align-content</th>
+			<td>container</td>
+			<td>container area</td>
+			<td>cross</td>
+			<td>stretch</td>
+		  </tr>
+		  <tr>
+			<th scope="row">justify-items</th>
+			<td>container</td>
+			<td>item area</td>
+			<td>main</td>
+			<td>stretch</td>
+		  </tr>
+		  <tr>
+			<th scope="row">align-items</th>
+			<td>container</td>
+			<td>item area</td>
+			<td>cross</td>
+			<td>stretch</td>
+		  </tr>
+		  <tr>
+			<th scope="row">justify-self</th>
+			<td>item</td>
+			<td>own item area</td>
+			<td>main</td>
+			<td>justify-items value</td>
+		  </tr>
+		  <tr>
+			<th scope="row">align-self</th>
+			<td>container</td>
+			<td>own item area</td>
+			<td>cross</td>
+			<td>align-items value</td>
+		  </tr>
+		</tbody>
+	  </table>
+	  
+
+	<div class="notes">
+		<p>flex: flex-grow flex-shrink flex-basis (default is flex: 0 1 auto) <br>
+			flex-grow: take up all remaining spaces <br>
+		flex-shrink: <br>
+		flex-basis: sizing<br><br>
+
+		grid: row-tracks / column-tracks
+	<ul>
+		grid track sizes are:
+		<li>static values (px, em)</li>
+		<li>percentages</li>
+		<li>fractional units (1fr)</li>
+		<li>content-relative units (min-content, max-content)</li>
+		<li>auto</li>
+		<li>minmax(min-track-size, max-track-size)</li>
+	</ul>
+	grid-auto-flow: (column or row) <br>
+	grid-auto-rows: track-size <br>
+	grid-template-areas
+	</div>
+
+	<div class="flex">
+		<div class="flex-item">1</div>
+		<div class="flex-item special">2</div>
+		<div class="flex-item">3</div>
+	</div>
+
+	<div class="flex-holygrail">
+		<header>Header</header>
+		<div class="horizontal-layout">
+			<nav>Nav</nav>
+			<main>Main</main>
+			<aside>Sidebar</aside>			
+		</div>
+		<footer>Footer</footer>
+	</div>
+
+	<div class="grid-holygrail">
+		<header class="grid-item">Header</header>
+		<nav class="grid-item">Nav</nav>
+		<main class="grid-item">Main</main>
+		<aside class="grid-item">Sidebar</aside>
+		<footer class="grid-item">Footer</footer>
+	</div>
+</body>
+</html>
