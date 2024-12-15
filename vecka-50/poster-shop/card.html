@@ -1,33 +1,41 @@
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>card experiments</title>
 	<style>
-		body{
+		
+		body {
 			background-color: rgb(91, 91, 91);
 		}
-		.card{
-			background-color: black;
+
+		/* Block styles */
+		.card {
 			width: 100%;
-			max-width: 300px;
 			aspect-ratio: 3/5;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
 		}
-		.card--img{
+
+		/* Element styles */
+		.card__image {
 			background-color: black;
 			width: 100%;
 		}
-		.card--text{
-			color: white;
-		}
-		.card--title{
+
+		.card__title {
 			font-size: 1.5em;
 		}
-		.card--btn{
-			/* position: relative; */
+
+		.card__text {
+			margin-top: -10%;
+			overflow: clip;
+			font-size: 1em;
+		}
+
+		.card__button {
 			bottom: 50;
 			background-color: #E83F57;
 			border-radius: 0.2em;
@@ -35,21 +43,74 @@
 			padding: 2%;
 			align-self: flex-start;
 			justify-self: end;
-			/* margin-bottom: auto; */
+		}
+
+		/* Modifier styles */
+		.card--small {
+			background-color: black;
+			max-width: 300px;
+			color: white;
+		}
+
+		.card--large {
+			background-color: white;
+			max-width: 500px;
+			color: black;
+			position: relative;
+		}
+		
+		.card__title--small{
+			margin-top: 0%;
+			
+		}
+
+		.card__title--large{
+			margin-top: 0%;
+			margin-bottom: 5%;
+		}
+
+		.card__text--small{
+
+		}
+
+		.card__text--large{
 			/* margin-top: auto; */
+			margin-bottom: 25%;
+		}
+
+		.card__button--small{
+
+		}
+
+		.card__button--large{
+			margin-bottom: 1rem;
+			margin-left: 1rem;
 		}
 	</style>
 </head>
+
 <body>
-	<div class="card">
-		<img class="card--img" src="assets/char-1.png" alt="">
-		<h3 class="card--title card--text">Austronaut</h3>
-		<p class="card--desc card--text">
-			Marfa artisan pok pok, coloring book shaman
-			intelligentsia meh kinfolk affogato raw 
-			denim direct trade subway tile kombucha.
+	<div class="card card--small">
+		<img class="card__image" src="assets/char-1.png" alt="Austronaut">
+		<!-- <div class="card_content card_content--small"></div> -->
+			<h3 class="card__title card__title--small">Austronaut</h3>
+			<p class="card__text card__text--small">
+				Marfa artisan pok pok, coloring book shaman
+				intelligentsia meh kinfolk affogato raw
+				denim direct trade subway tile kombucha.
 			</p>
-		<button class="card--btn card--text">Oh, take my money!</button>
+			<button class="card__button card__button--small">Oh, take my money!</button>
+	</div>
+	<div class="card card--large">
+		<img class="card__image" src="assets/char-1.png" alt="">
+		<h3 class="card__title card__title--large">Austronaut</h3>
+		<p class="card__text card__text--large">
+			Marfa artisan pok pok, coloring book shaman
+			intelligentsia meh kinfolk affogato raw
+			denim direct trade subway tile kombucha.
+		</p>
+		<button class="card__button card__button--large">Oh, take my money!</button>
 	</div>
 </body>
+
 </html>
