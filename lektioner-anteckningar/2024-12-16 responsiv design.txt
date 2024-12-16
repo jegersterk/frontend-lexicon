@@ -1,0 +1,39 @@
+Icke responsiv design är design som
+"går sönder", ex: objekt skjuter ut
+ur container.
+
+mobile/tablet/desktop
+
+Mobile först: en tankesätt. 
+design för mindre skärm
+innan större skärm. Lättare att gå från liten
+till stor. 80% av webb-besökare 
+mobilanvändare. Ena inte ska vara
+bättre än andra. gamla mobiler 300px
+Ska vara enklare design och undvik 
+överflödighet. stora knappar.
+
+Se powerpoint för tabell.
+
+för flex använd flexwrap och 
+flex-direction: row för bred skärm.
+om flex column används ska täcka
+hela sidans bredd. 
+
+grid kan också wrappa om man 
+använder rätt kod.
+
+media queries: css regler baserat
+på kriterier.
+media types - (all, print, screen)
+media features - egenskaper för
+webbläsare på enheten (min/max-width)
+
+warning! media queries struntar i
+villkor med fel skrivet syntax.
+
+använd queries om inte kan lösa på
+annat sätt. undvik om det går.
+flex, grid går att göra responsiv
+design. 280px galaxy fold.
+sätt max-width.
