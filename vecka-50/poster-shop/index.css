@@ -5,8 +5,11 @@
 	--clr-bg-main: #752929;
 	--clr-bg-content: #966e81;
 	--clr-bg-footer: #FFFFFF33;
+
+	--body-max-width: 90rem;
 	--mrgn-top-footer-items: 10%;
 	--font-size-footer: 2rem;
+	
 }
 
 body{
@@ -20,29 +23,211 @@ body{
 	/* flex-direction: column; */
 	/* align-items: center; */
 }
-header{
+
+/* header */
+.header{
 	display: flex;
 	background-color: #3DE07E;
 	width: 100%;
 	height: 20rem;
-	align-items: center;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: space-between;
 }
-h1{
+
+.header__burger-menu{
+	position: relative;
+	top: 1rem;
+	left: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* align-self: flex-start; */
+	width: 1.5rem;
+	height: 1.5rem;
+	
+}
+
+.header__burger-menu:hover{
+	cursor: pointer;
+}
+
+.header__burger-menu__span{
+	list-style: none;
+	background-color: #000000;
+	width: 80%;
+	height: 10%;
+	margin: 5%;
+	border-radius: 10rem;
+}
+
+.header__burger-offscreen{
+	display: none;
+}
+
+.header__burger-offscreen--active{
+	color: rgb(62, 62, 62);
+	background-color: #767676;
+	display: block;
+	position: fixed;
+	width: 20rem;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	font-size: 2rem;
+	transform-origin: left;
+	animation: open-menu 0.3s forwards ease-in-out;
+}
+
+@keyframes open-menu{
+	0%{transform: scaleX(0%);}
+	100%{transform: scaleX(100%);}
+}
+
+.header__burger-offscreen__cancel{
+	/* background-color: rgb(0, 77, 77); */
+	position: relative;
+	top: 1rem;
+	left: 1rem;
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+.header__burger-offscreen__cancel::before, .header__burger-offscreen__cancel::after{
+	content: '';
+	position: absolute;
+	background-color: black;
+	width: 10%;
+	height: 130%;
+	left:47.5%;
+	bottom: -15%;
+	transform-origin: center;
+}
+.header__burger-offscreen__cancel::before{rotate: 45deg;}
+.header__burger-offscreen__cancel::after{rotate: -45deg;}
+
+.header__burger-offscreen__cancel:hover{
+	cursor: pointer;
+}
+
+.header__links{
+	color: inherit;
+	list-style-type: none;
+	user-select: none;
+}
+
+.header__link-item{
+	margin:20%;
+}
+
+.header__link{
+	color: inherit;
+	text-decoration: none;
+}
+
+.header__title{
 	text-align: center;
 	font-size: 3rem;
 }
+
+.header__image{
+	/* position: absolute; */
+	align-self: center;
+	/* top: 30%; */
+	width: 8rem;
+}
+
+/* main */
 main{
 	display: flex;
 	background-color: #752929;
 	width: 100%;
 	justify-content: center;
 }
-.content{
+.card-container{
 	background-color: #966e81;
 	width: 62.5rem;
+	height: 1400px;
 }
-footer{
+.card {
+	width: 100%;
+	aspect-ratio: 3/5;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+/* Element styles */
+.card__image {
+	background-color: black;
+	width: 100%;
+}
+
+.card__title {
+	overflow: clip;
+	font-size: 1.5em;
+}
+
+.card__text {
+	font-size: 1em;
+}
+
+.card__button {
+	bottom: 50;
+	background-color: #E83F57;
+	border-radius: 0.2em;
+	border: none;
+	padding: 2%;
+	align-self: flex-start;
+}
+
+/* Modifier styles */
+.card--small {
+	background-color: black;
+	max-width: 300px;
+	color: white;
+}
+
+.card--large {
+	background-color: white;
+	max-width: 500px;
+	color: black;
+	position: relative;
+}
+
+.card__title--small{
+	margin-top: 0%;
+	
+}
+
+.card__title--large{
+	font-size: 2.5rem;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	margin-left: 1rem;
+}
+
+.card__text--small{
+	margin-top: -10%;
+}
+
+.card__text--large{
+	/* margin-top: auto; */
+	margin-bottom: 35%;
+	margin-left: 1rem;
+}
+
+.card__button--small{
+
+}
+
+.card__button--large{
+	margin-bottom: 1rem;
+	margin-left: 1rem;
+}
+
+/* footer */
+.footer{
 	color: white;
 	background-color: #FFFFFF33;
 	width: 100%;
@@ -58,7 +243,7 @@ footer{
 	.address{grid-area: address;}
 	.socials{grid-area: socials;}
 }
-.nav{
+.footer__nav{
 	display: flex;
 	flex-direction: column;
 	margin-top: var(--mrgn-top-footer-items);
@@ -77,14 +262,14 @@ footer{
 		text-decoration: underline;
 	}
 }
-address{
+.footer__address{
 	margin-top: var(--mrgn-top-footer-items);
 	h3{
 		font-size: 2rem;
 		margin-bottom: 0rem;
 	}
 }
-.socials{
+.footer__socials{
 	margin-top: var(--mrgn-top-footer-items);
 	h3{
 		font-size: 2rem;

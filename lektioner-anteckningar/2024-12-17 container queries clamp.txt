@@ -1,0 +1,9 @@
+container queries baseras på förälderns
+storlek och inte hela vieport.
+för komponentbaserat css.
+ex: 
+@container {max-width 400px}{}
+appliceras för när container är
+mindre än 400px.
+font-size: clamp(min,ideal,max)
+ger responsiv textstorlek.

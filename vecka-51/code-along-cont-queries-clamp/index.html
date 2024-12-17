@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body {
+			background-color: rgb(191, 191, 191);
+			color: white;
+			margin: 0%;
+		}
+
+		h1 {
+			font-size: clamp(2rem, 6vw, 4rem);
+		}
+
+		main {
+			container-type: inline-size;
+			container-name: main;
+		}
+
+		.card {
+			display: flex;
+			flex-direction: column;
+			background-color: hotpink;
+		}
+
+		@container main (width < 400px) {
+			.card {
+				background-color: blueviolet;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>container queries and clamp</h1>
+	</header>
+	<main>
+		<section class="card">
+			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+				Neque cumque eaque quis, vero consequuntur
+				eos accusantium beatae dolores laborum minus
+				perferendis praesentium iusto ea ipsa ex inventore
+				voluptate iste similique!</p>
+		</section>
+	</main>
+</body>
+
+</html>

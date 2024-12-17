@@ -1,35 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Poster shop</title>
 	<link rel="stylesheet" href="index.css">
 </head>
-<body>
-	<header>
-		<nav>
 
+<body>
+	<header class="header">
+		<nav class="header__burger-menu" onclick="activate()">
+			<span class="header__burger-menu__span"></span>
+			<span class="header__burger-menu__span"></span>
+			<span class="header__burger-menu__span"></span>
+			<span class="header__burger-menu__span"></span>
 		</nav>
-		<h1>Poster Shop</h1>
+		<div class="header__burger-offscreen" id="he" >
+			<div class="header__burger-offscreen__cancel"></div>
+			<ul class="header__links">
+				<li class="header__link-item"><a href="index.html" class="header__link">Home</a></li>
+				<li class="header__link-item"><a href="checkout.html" class="header__link">Checkout</a></li>
+			</ul>
+		</div>
+		<h1 class="header__title">Poster Shop</h1>
+		<img class="header__image" src="assets/ninjahead.svg" alt="ninja head">
+		<script>
+			let menu = document.querySelector(".header__burger-menu")
+			let cancel = document.querySelector(".header__burger-offscreen__cancel")
+			let offscreen = document.querySelector(".header__burger-offscreen")
+			menu.addEventListener('click',() => {
+				offscreen.classList.toggle("header__burger-offscreen--active")
+			})
+			cancel.addEventListener('click',() => {
+				offscreen.classList.toggle("header__burger-offscreen--active")
+			})
+		</script>
 	</header>
-	<main>
-		<section class="content">a</section>
+	<main class="main">
+		<section class="card-container">
+			<div class="card card--small">
+				<img class="card__image" src="assets/char-1.png" alt="Austronaut">
+				<!-- <div class="card_content card_content--small"></div> -->
+					<h3 class="card__title card__title--small">Austronaut</h3>
+					<p class="card__text card__text--small">
+						Marfa artisan pok pok, coloring book shaman
+						intelligentsia meh kinfolk affogato raw
+						denim direct trade subway tile kombucha.
+					</p>
+					<button class="card__button card__button--small">Oh, take my money!</button>
+			</div>
+		</section>
 	</main>
-	<footer>
-		<nav class="nav">
-		<h3>Nav</h3>
-		<a href="#">Products</a>
-		<a href="#">About us</a>
-		<a href="#">Contact</a>
+	<footer class="footer">
+		<nav class="nav footer__nav">
+			<h3>Nav</h3>
+			<a href="#">Products</a>
+			<a href="#">About us</a>
+			<a href="#">Contact</a>
 		</nav>
-		<address class="address">
+		<address class="address footer__address">
 			<h3>Address</h3>
 			<p>
-			Plinkeplonkvägen 32 <br>
-			888 81 Klonkberga</p>
+				Plinkeplonkvägen 32 <br>
+				888 81 Klonkberga</p>
 		</address>
-		<div class="socials">
+		<div class="socials footer__socials">
 			<h3>Social media</h3>
 			<div>
 				<img src="assets/logo-twitter.svg" alt="twitter logo">
@@ -40,4 +76,5 @@
 		</div>
 	</footer>
 </body>
+
 </html>
