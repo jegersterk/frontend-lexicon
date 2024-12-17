@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Poster shop</title>
-	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="checkout.css">
 </head>
 
 <body>
@@ -18,9 +18,9 @@
 		</nav>
 		<div class="header__burger-offscreen" id="he" >
 			<div class="header__burger-offscreen__cancel"></div>
-			<ul class="header__links">
-				<li class="header__link-item"><a href="index.html" class="header__link">Home</a></li>
-				<li class="header__link-item"><a href="checkout.html" class="header__link">Checkout</a></li>
+			<ul class="header__burger-offscreen__links">
+				<li class="header__burger-offscreen__item"><a href="index.html" class="header__burger-offscreen__link">Home</a></li>
+				<li class="header__burger-offscreen__item"><a href="checkout.html" class="header__burger-offscreen__link">Checkout</a></li>
 			</ul>
 		</div>
 		<h1 class="header__title">Poster Shop</h1>
@@ -37,29 +37,62 @@
 			})
 		</script>
 	</header>
-	<main>
-		<section class="content">a</section>
+	<main class="main">
+		<section class="checkout-container">
+			<h3 class="checkout-container__title">Varor i korg</h3>
+			<div class="checkout-container__card-container">
+				<div class="card card--large card--checkout">
+					<img class="card__image" src="assets/char-1.png" alt="">
+					<h3 class="card__title card__title--large card__title--checkout">Austronaut</h3>
+					<button class="card__button card__button--large">Oh, take my money!</button>
+				</div>
+				<div class="card card--large card--checkout">
+					<img class="card__image" src="assets/char-1.png" alt="">
+					<h3 class="card__title card__title--large card__title--checkout">Austronaut</h3>
+					<button class="card__button card__button--large">Oh, take my money!</button>
+				</div>
+			</div>
+			<div class="checkout-container__counter-table">
+				
+				<div class="counter-table__element--head-data">Vara</div>
+				<div class="counter-table__element--head-data">Antal</div>
+				<div class="counter-table__element--head-data">Pris</div>
+				<div class="counter-table__element--body-data">Poster</div>
+				<div class="counter-table__element--body-data">1</div>
+				<div class="counter-table__element--body-data">179 sek</div>
+				<div class="counter-table__element--body-data">Poster</div>
+				<div class="counter-table__element--body-data">1</div>
+				<div class="counter-table__element--body-data">179 sek</div>
+				<div class="counter-table__element--line"></div>
+				<div class="counter-table__element--line"></div>
+				<div class="counter-table__element--line"></div>
+				<div class="counter-table__element--foot-data">Totalt</div>
+				<div class="counter-table__element--foot-data"></div>
+				<div class="counter-table__element--foot-data">358 sek</div>
+			</table>
+			<button class="checkout-container__button">Gimme gimme gimme!</button>
+		</section>
 	</main>
 	<footer class="footer">
 		<nav class="nav footer__nav">
-			<h3>Nav</h3>
-			<a href="#">Products</a>
-			<a href="#">About us</a>
-			<a href="#">Contact</a>
+			<h3 class="footer__nav__title">Nav</h3>
+			<a class="footer__nav__link" href="#">Products</a>
+			<a class="footer__nav__link" href="#">About us</a>
+			<a class="footer__nav__link" href="#">Contact</a>
 		</nav>
-		<address class="address footer__address">
-			<h3>Address</h3>
+		<address class="footer__address">
+			<h3 class="footer__address__title">Address</h3>
 			<p>
 				Plinkeplonkvägen 32 <br>
 				888 81 Klonkberga</p>
 		</address>
-		<div class="socials footer__socials">
+		<div class="footer__socials">
 			<h3>Social media</h3>
-			<div>
-				<img src="assets/logo-twitter.svg" alt="twitter logo">
-				<img src="assets/logo-facebook.svg" alt="twitter logo">
-				<img src="assets/logo-linkedin.svg" alt="twitter logo">
-				<img src="assets/logo-instagram.svg" alt="twitter logo">
+			<div class="link__container">
+				<img class="socials__link" src="assets/logo-twitter.svg" alt="twitter logo">
+				<img class="socials__link" src="assets/logo-facebook.svg" alt="twitter logo">
+				<img class="socials__link" src="assets/logo-linkedin.svg" alt="twitter logo">
+				<img class="socials__link" src="assets/logo-instagram.svg" alt="twitter logo">
 			</div>
 		</div>
 	</footer>

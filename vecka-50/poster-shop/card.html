@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>card experiments</title>
 	<style>
-		
 		body {
 			background-color: rgb(91, 91, 91);
 		}
@@ -50,42 +49,47 @@
 			color: white;
 		}
 
+		.card__title--small {
+			margin-top: 0%;
+		}
+
+		.card__text--small {
+			margin-top: -10%;
+		}
+
+		.card__button--small {}
+
 		.card--large {
 			background-color: white;
 			max-width: 500px;
 			color: black;
 			position: relative;
 		}
-		
-		.card__title--small{
-			margin-top: 0%;
-			
-		}
 
-		.card__title--large{
+		.card__title--large {
 			font-size: 2.5rem;
 			margin-top: 5%;
 			margin-bottom: 5%;
 			margin-left: 1rem;
 		}
 
-		.card__text--small{
-			margin-top: -10%;
-		}
-
-		.card__text--large{
+		.card__text--large {
 			/* margin-top: auto; */
 			margin-bottom: 35%;
 			margin-left: 1rem;
 		}
 
-		.card__button--small{
-
-		}
-
-		.card__button--large{
+		.card__button--large {
 			margin-bottom: 1rem;
 			margin-left: 1rem;
+		}
+
+		.card--checkout{
+			aspect-ratio:unset;
+		}
+
+		.card__title--checkout{
+			
 		}
 	</style>
 </head>
@@ -94,13 +98,13 @@
 	<div class="card card--small">
 		<img class="card__image" src="assets/char-1.png" alt="Austronaut">
 		<!-- <div class="card_content card_content--small"></div> -->
-			<h3 class="card__title card__title--small">Austronaut</h3>
-			<p class="card__text card__text--small">
-				Marfa artisan pok pok, coloring book shaman
-				intelligentsia meh kinfolk affogato raw
-				denim direct trade subway tile kombucha.
-			</p>
-			<button class="card__button card__button--small">Oh, take my money!</button>
+		<h3 class="card__title card__title--small">Austronaut</h3>
+		<p class="card__text card__text--small">
+			Marfa artisan pok pok, coloring book shaman
+			intelligentsia meh kinfolk affogato raw
+			denim direct trade subway tile kombucha.
+		</p>
+		<button class="card__button card__button--small">Oh, take my money!</button>
 	</div>
 	<div class="card card--large">
 		<img class="card__image" src="assets/char-1.png" alt="">
@@ -110,6 +114,11 @@
 			intelligentsia meh kinfolk affogato raw
 			denim direct trade subway tile kombucha.
 		</p>
+		<button class="card__button card__button--large">Oh, take my money!</button>
+	</div>
+	<div class="card card--large card--checkout">
+		<img class="card__image" src="assets/char-1.png" alt="">
+		<h3 class="card__title card__title--large card__title--checkout">Austronaut</h3>
 		<button class="card__button card__button--large">Oh, take my money!</button>
 	</div>
 </body>
