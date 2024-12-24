@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Planned Planthood</title>
-  </head>
-  <body class="body">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="style.css" />
+	<title>Planned Planthood</title>
+</head>
+
+<body class="body">
 	<header class="header">
 		<div class="header__content">
 			<div class="branding">
@@ -29,9 +31,14 @@
 			<div class="picture-container">pictures</div>
 		</section>
 		<section class="section--long email-section">
-			<h2>Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!
-			</h2>
-			email 
+			<div class="email-section__container">
+				<h2 class="email-section__title">Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h2>
+				<input class="email-section__input" type="email" id="email" name="email" placeholder="e-mail" autocomplete="email" required
+                    title="Var god fyll i epost" autofocus>
+			</div>
+			<div class="planting-icon-container">
+				<img class="planting-icon-container__icon" src="Assets\images\icon-planting.svg" alt="email logo">
+			</div>
 		</section>
 		<section class="section card-section">
 			card
@@ -41,78 +48,87 @@
 		</section>
 	</main>
 
-Blommor
-Ätbart
-Grönska
-Gurka
-Gurka växer snabbt, är enkel att odla och ger mängder med gurkor, bara man är noga med vattning, omplantering, duschning och gödsling.
-Coolio
-2024-04-01
+	Blommor
+	Ätbart
+	Grönska
+	Gurka
+	Gurka växer snabbt, är enkel att odla och ger mängder med gurkor, bara man är noga med vattning, omplantering,
+	duschning och gödsling.
+	Coolio
+	2024-04-01
 
-Solälskande
-Lättodlat
-Ätbart
-Tomat
-En perfekt grönsak att odla på balkongen eller i trädgården. Ger riklig skörd under sommaren.
-Anna Odlare
-2024-12-05
+	Solälskande
+	Lättodlat
+	Ätbart
+	Tomat
+	En perfekt grönsak att odla på balkongen eller i trädgården. Ger riklig skörd under sommaren.
+	Anna Odlare
+	2024-12-05
 
-Dekorativ
-Färgstark
-Tålig
-Blommor
-Pelargon
-En vacker och lättskött blomma som trivs både inne och ute under sommaren.
-Blomsterkalle
-2024-12-03
+	Dekorativ
+	Färgstark
+	Tålig
+	Blommor
+	Pelargon
+	En vacker och lättskött blomma som trivs både inne och ute under sommaren.
+	Blomsterkalle
+	2024-12-03
 
-Kryddor
-Doftande
-Solälskande
-Basilika
-En fantastisk krydda för pastarätter och sallader. Trivs bäst i ett soligt fönster.
-Krydd-Malin
-2024-12-07
+	Kryddor
+	Doftande
+	Solälskande
+	Basilika
+	En fantastisk krydda för pastarätter och sallader. Trivs bäst i ett soligt fönster.
+	Krydd-Malin
+	2024-12-07
 
-Snabbväxande
-Ätbart
-Grönska
-Sallad
-Sallad är en av de enklaste grönsakerna att odla och ger snabba resultat för färska måltider.
-Grönis
-2024-12-06
+	Snabbväxande
+	Ätbart
+	Grönska
+	Sallad
+	Sallad är en av de enklaste grönsakerna att odla och ger snabba resultat för färska måltider.
+	Grönis
+	2024-12-06
 
-Luftfuktande
-Grönska
-Dekorativ
-Ormbunke
-En klassisk växt som passar perfekt i badrummet eller på skuggiga platser.
-Naturvännen
-2024-12-08
+	Luftfuktande
+	Grönska
+	Dekorativ
+	Ormbunke
+	En klassisk växt som passar perfekt i badrummet eller på skuggiga platser.
+	Naturvännen
+	2024-12-08
 
-Våra tidigare odlingar
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione quia eos pariatur deserunt veritatis. Tenetur, ipsum! Iusto delectus ipsam esse pariatur rerum eveniet nostrum, dolor distinctio nam quaerat doloribus?
-Planterade plantor
+	Våra tidigare odlingar
+	Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione quia eos pariatur deserunt veritatis.
+	Tenetur, ipsum! Iusto delectus ipsam esse pariatur rerum eveniet nostrum, dolor distinctio nam quaerat doloribus?
+	Planterade plantor
 
-Telefon: 020-1234567
-info@plannedplant.com
+	Telefon: 020-1234567
+	info@plannedplant.com
 
-<footer class="footer">
-	<div class="footer__info">
-		<div class="branding footer__branding">
-			<img class="branding__logo footer__branding__logo" src="Assets\images\logo.svg" alt="logo">
-			<h1 class="branding__title footer__branding__title">PLANNED PLANTHOOD</h1>
+	<footer class="footer">
+		<div class="footer__info">
+			<div class="branding footer__branding">
+				<img class="branding__logo footer__branding__logo" src="Assets\images\logo.svg" alt="logo">
+				<h1 class="branding__title footer__branding__title">PLANNED PLANTHOOD</h1>
+			</div>
+			<p class=" footer__info__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, veniam
+				ducimus aut sint atque ullam alias perspiciatis fuga. Consequuntur nesciunt ea corrupti aperiam fugit
+				inventore ratione earum. Iure, eius molestias?</p>
+			<a class="footer__info__contact" href="tel:+442071234567"> <img
+					class="icon icon--phone" src="Assets/images/icon-phone.svg" alt="phone icon"> Telefon: 020-1234567
+			</a>
+			<a class="footer__info__contact" href="mailto:info@plannedplant.com"> <img
+					class="icon icon--email" src="Assets/images/icon-email.svg" alt="email icon">
+				info@plannedplant.com</a>
 		</div>
-		<p class="footer__info__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, veniam ducimus aut sint atque ullam alias perspiciatis fuga. Consequuntur nesciunt ea corrupti aperiam fugit inventore ratione earum. Iure, eius molestias?</p>
-		<a class="footer__info__telephone" href="tel:+442071234567">&#x260E; 020-1234567</a>
-		<a class="footer__info__email" href="mailto:info@plannedplant.com">&#x2709; info@plannedplant.com</a>
-	</div>
-	<nav class="footer__nav">
-		<a class="footer__nav__item" href="">Hem</a>
-		<a class="footer__nav__item" href="">Historik</a>
-		<a class="footer__nav__item" href="">Tips</a>
-		<a class="footer__nav__item" href="">Kontakt</a>
-	</nav>
-</footer>
-  </body>
+		<nav class="footer__nav">
+			<a class="footer__nav__item" href="">Hem</a>
+			<a class="footer__nav__item" href="">Historik</a>
+			<a class="footer__nav__item" href="">Tips</a>
+			<a class="footer__nav__item" href="">Kontakt</a>
+		</nav>
+	</footer>
+</body>
+
 </html>

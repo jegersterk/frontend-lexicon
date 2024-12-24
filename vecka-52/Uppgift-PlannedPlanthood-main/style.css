@@ -261,7 +261,7 @@ body {
 .section--long{
 	background-color: var(--clr-neutral-100);
 	width: 100%;
-	height: 5rem;
+	height: 18rem;
 }
 
 .picture-section {
@@ -282,7 +282,43 @@ body {
 }
 
 .email-section{
+	display: flex;
+	flex-direction: row;
+	gap: 3rem;
+	justify-content: center;
+	align-items: center;
+}
 
+.email-section__container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 2rem;
+	width: 24rem;
+}
+
+.email-section__title{
+
+}
+
+.email-section__input{
+
+}
+
+.planting-icon-container{
+	background-color: var(--clr-green-400);
+	width: 12.5rem;
+	height: 12.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+}
+
+.planting-icon-container__icon{
+	filter: invert(0%) sepia(0%) saturate(5072%) hue-rotate(133deg) brightness(96%) contrast(92%);
+	margin: auto;
+	width: 6rem
 }
 
 .footer {
@@ -316,14 +352,23 @@ body {
 	color: var(--clr-neutral-100);
 }
 
-.footer__info__telephone {
-	display: block;
+.footer__info__contact{
 	color: inherit;
+	font-weight: var(--fw-600);
 }
 
-.footer__info__email {
-	display: block;
-	color: inherit;
+.footer__info__contact--phone {
+	/* display: block; */
+	/* clear:both; */
+}
+
+.footer__info__contact--email {
+}
+
+.icon{
+	display: inline;
+	width: 0.9rem;
+	margin-right: 0.5ch;
 }
 
 .footer__nav {
