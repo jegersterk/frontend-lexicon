@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body {
+			background-color: rgb(132, 132, 132);
+		}
+
+		.card-container {
+			background-color: beige;
+			width: 60vw;
+			/* width: 300px; */
+			container: inline-size;
+			container-name: card-container;
+			display: flex;
+		}
+
+		/* Container definieras */
+		.card {
+			width: 250px;
+			width: 20vw;
+			height: 250px;
+			background-color: hotpink;
+		}
+
+		/* Regler appliceras när containern är mindre än 400px */
+		@container (min-width: 50px) {
+			.card {
+				font-size: 14px;
+				padding: 10px;
+				background-color: lightblue;
+			}
+		}
+
+		/* Regler för större containrar */
+		@container card-container (max-width: 400px) {
+			.card {
+				font-size: 18px;
+				padding: 20px;
+				background-color: lightgreen;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="card-container">
+		<div class="card">detta är ett kort</div>
+		<div class="card">detta är ett kort 2</div>
+	</div>
+</body>
+
+</html>

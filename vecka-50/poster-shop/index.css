@@ -128,13 +128,17 @@ body {
 
 .header__burger-offscreen__cancel:hover {
 	cursor: pointer;
-	text-decoration: underline;
+	
 }
 
 .header__burger-offscreen__links {
 	color: inherit;
 	list-style-type: none;
 	user-select: none;
+}
+
+.header__burger-offscreen__link:hover{
+	text-decoration: underline;
 }
 
 .header__burger-offscreen__item {

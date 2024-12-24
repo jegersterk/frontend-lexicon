@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Formulär genomgång den 17 dec</h1>
+    <section>
+        <form>
+            <input placeholder="Namn" type="text" name="name">
+            <!-- <input placeholder="telefonnummer" type="text" name="telefonnummer"> -->
+            <!-- <input placeholder="adress" type="text" name="adress"> -->
+            <button type="submit">skicka</button>
+        </form>
+    </section>
+    <section>
+        <h2>Med label</h2>
+        <form>
+            <fieldset>
+                <legend>Kontaktuppgifter</legend>
+                <label for="email">E-post:</label>
+                <input type="email" id="email" name="email" placeholder="e-mail" autocomplete="email" required
+                    title="Var god fyll i epost" autofocus>
+                <label for="phone">Telefon:</label>
+                <input type="tel" id="phone" name="phone" placeholder="telefonnummer" autocomplete="tel">
+                <label for="personnummer">Personnummer (ÅÅÅMMDD-XXX) :</label>
+                <input type="text" id="personnummer" name="Personnummer" pattern="\d{8}-\d{4}"
+                    placeholder="Ex: 19909295-1234" required>
+            </fieldset>
+            <fieldset>
+                <legend>Kontouppgifter</legend>
+                <label for="ccn">Kortnummer</label>
+                <input type="date" id="ccn" name="ccn">
+                <label for="expiry">Utgångsdatum:</label>
+                <input type="text" id="expiry" name="expiry">
+                <label for="password">Lösenord:</label>
+                <input type="password" id="password" name="password">
+
+            </fieldset>
+            <button type="submit">Skicka</button>
+        </form>
+
+
+    </section>
+    <section>
+        <!-- EXEMPEL 6: Skillnad mellan disabled och readonly -->
+        <form>
+            <fieldset>
+                <legend>Disabled</legend>
+                <label for="disabledField">Detta är ett disabled inputfält</label>
+                <input type="text" id="disabledField" disabled value="Ej redigerbar">
+                <button aria-describedby="submitDisabled" type="submit" disabled>Disabled button</button>
+                <p id="submitDisabled">Fyll i obligatoriska fält</p>
+            </fieldset>
+        </form>
+    </section>
+    <section>
+        <form>
+            <fieldset>
+                <legend>Read-Only exempel</legend>
+                <label for="readOnlyField">Read-only fält</label>
+                <input type="text" id="readOnlyField" readonly value="Kan läsas men inte ändras">
+                <button type="submit">Skicka</button>
+            </fieldset>
+        </form>
+    </section>
+</body>
+
+</html>

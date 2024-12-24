@@ -1,0 +1,83 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+
+		:root{
+			--widthvar: 300px;
+		}
+
+		.card-parent {
+			display: flex;
+			gap: 10px;
+		}
+
+		.card-parent {
+			container-type: inline-size;
+			/* set name here, or write this in one line using the container shorthand */
+			container-name: card-container;
+		}
+
+		.card {
+			display: grid;
+			grid-template-columns: 1fr;
+			width: 100px;
+			height: 100px;
+			border: 1px solid red;
+
+			>* {
+				border: 1px solid green;
+			}
+		}
+
+		.outside{
+			background-color: aqua;
+			width: var(--widthvar);
+			height: 100px;
+		}
+
+		@container card-container (max-width: var(--widthvar)) {
+			.card {
+				background-color: red;
+				color: #fff;
+			}
+		}
+
+		@container card-container (max-width: 300px) {
+			.card {
+				background-color: red;
+				color: #fff;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<!-- card parent -->
+	<div class="card-parent">
+		<div class="card">
+			card content
+		</div>
+		<div class="card">
+			card content
+		</div>
+		<div class="card">
+			card content
+		</div>
+		<div class="card">
+			card content
+		</div>
+		<div class="card">
+			card content
+		</div>
+		<div class="card">
+			card content
+		</div>
+	</div>
+	<div class="outside"></div>
+</body>
+
+</html>
