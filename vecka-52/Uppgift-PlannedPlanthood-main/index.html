@@ -33,11 +33,15 @@
 		<section class="section--long email-section">
 			<div class="email-section__container">
 				<h2 class="email-section__title">Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h2>
-				<input class="email-section__input" type="email" id="email" name="email" placeholder="e-mail" autocomplete="email" required
-                    title="Var god fyll i epost" autofocus>
+				<!-- <input class="email-section__input" type="email" id="email" name="email" placeholder="e-mail"
+					autocomplete="email" required title="Var god fyll i epost" autofocus> -->
+				<form action="#" method="get" class="email-form">
+					<input type="email" class="email-form__input" name="email" placeholder="email@domain.com" maxlength="30">					
+					<button type="submit" class="email-form__button">SKICKA</button>
+				</form>
 			</div>
-			<div class="planting-icon-container">
-				<img class="planting-icon-container__icon" src="Assets\images\icon-planting.svg" alt="email logo">
+			<div class="round-icon-container round-icon-container--planting">
+				<img class="round-icon-container__icon round-icon-container__icon--planting" src="Assets\images\icon-planting.svg" alt="email logo">
 			</div>
 		</section>
 		<section class="section card-section">
@@ -97,14 +101,18 @@
 	En klassisk växt som passar perfekt i badrummet eller på skuggiga platser.
 	Naturvännen
 	2024-12-08
-
-	Våra tidigare odlingar
-	Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione quia eos pariatur deserunt veritatis.
-	Tenetur, ipsum! Iusto delectus ipsam esse pariatur rerum eveniet nostrum, dolor distinctio nam quaerat doloribus?
-	Planterade plantor
-
-	Telefon: 020-1234567
-	info@plannedplant.com
+	<section class="section--long harvests-section">
+		<div class="round-icon-container round-icon-container--seedling">
+			<img class="round-icon-container__icon round-icon-container__icon--seedling" src="Assets/images/icon-seedling.svg" alt="email logo">
+		</div>
+		<div class="harvests-section__container">
+			<h2 class="harvests-section__title">Våra tidigare odlingar</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione quia eos pariatur deserunt veritatis.
+				Tenetur, ipsum! Iusto delectus ipsam esse pariatur rerum eveniet nostrum, dolor distinctio nam quaerat doloribus?
+				</p>
+				<button class="harvests-section__button">Planterade plantor</button>
+			</div>
+	</section>
 
 	<footer class="footer">
 		<div class="footer__info">
@@ -115,11 +123,11 @@
 			<p class=" footer__info__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, veniam
 				ducimus aut sint atque ullam alias perspiciatis fuga. Consequuntur nesciunt ea corrupti aperiam fugit
 				inventore ratione earum. Iure, eius molestias?</p>
-			<a class="footer__info__contact" href="tel:+442071234567"> <img
-					class="icon icon--phone" src="Assets/images/icon-phone.svg" alt="phone icon"> Telefon: 020-1234567
+			<a class="footer__info__contact" href="tel:+442071234567"> <img class="icon icon--phone"
+					src="Assets/images/icon-phone.svg" alt="phone icon"> Telefon: 020-1234567
 			</a>
-			<a class="footer__info__contact" href="mailto:info@plannedplant.com"> <img
-					class="icon icon--email" src="Assets/images/icon-email.svg" alt="email icon">
+			<a class="footer__info__contact" href="mailto:info@plannedplant.com"> <img class="icon icon--email"
+					src="Assets/images/icon-email.svg" alt="email icon">
 				info@plannedplant.com</a>
 		</div>
 		<nav class="footer__nav">
