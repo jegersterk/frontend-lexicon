@@ -1,72 +1,148 @@
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<style>
-		body{
+		body {
 			display: grid;
-			grid-template-areas: 
-			'header header' 
-			'nav main' 
-			'nav aside'
-			'footer footer';
-			grid-template-rows: auto 
-								1fr 
-								auto;
+			grid-template-areas:
+				'header header'
+				'nav main'
+				'nav aside'
+				'footer footer';
+			grid-template-rows: auto 1fr 1fr auto;
 			grid-template-columns: 1fr 1fr 1fr;
 			gap: 10px;
 			height: 100vh;
 		}
-		header{
+
+		header {
 			grid-area: header;
 			background-color: yellow;
 			text-align: center;
 			padding: 10px;
 		}
-		nav{
+
+		nav {
 			grid-area: nav;
 			background-color: greenyellow;
 			text-align: center;
 			padding: 10px;
 		}
-		main{
+
+		main {
 			grid-area: main;
 			background-color: blue;
 			text-align: center;
 			padding: 10px;
 		}
-		aside{
+
+		aside {
 			grid-area: aside;
 			background-color: purple;
 			text-align: center;
 			padding: 10px;
 		}
-		footer{
+
+		footer {
 			grid-area: footer;
 			background-color: orange;
 			text-align: center;
 			padding: 10px;
 		}
-		@media(max-width: 500px){
-			body{
-				grid-template-areas: 
-				'header'
-				'nav'
-				'main'
-				'aside'
-				'footer';
+
+		@media(max-width: 500px) {
+			body {
+				grid-template-areas:
+					'header'
+					'nav'
+					'main'
+					'aside'
+					'footer';
 				grid-template-rows: auto;
 				grid-template-columns: 1fr;
 			}
 		}
+
+		.grid-container {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			/* 3 equal columns */
+			grid-template-rows: repeat(3, 1fr);
+			/* 4 equal rows for better control */
+			gap: 10px;
+			/* Optional, for spacing between items */
+			height: 400px;
+			/* Adjust as needed */
+		}
+
+		.item1 {
+			/* grid-column: 1 / 2; */
+			/* Occupies the entire first column */
+			grid-row: 1 / span 3;
+			/* Spans all rows in the first column */
+			background: lightblue;
+		}
+
+		.item2 {
+			grid-column: 2 / 3;
+			/* Middle column */
+			grid-row: 1 / 2;
+			/* Top half */
+			background: lightgreen;
+		}
+
+		.item3 {
+			grid-column: 2 / 3;
+			/* Middle column */
+			grid-row: 2 / 3;
+			/* Below item2 in the middle column */
+			background: lightpink;
+		}
+
+		.item4 {
+			grid-column: 3 / 4;
+			/* Third column */
+			grid-row: 1 / 2;
+			/* Top row */
+			background: lightcoral;
+		}
+
+		.item5 {
+			grid-column: 3 / 4;
+			/* Third column */
+			grid-row: 2 / 3;
+			/* Second row */
+			background: lightgoldenrodyellow;
+		}
+
+		.item6 {
+			grid-column: 3 / 4;
+			/* Third column */
+			grid-row: 3 / 4;
+			/* Third row */
+			background: lightgray;
+		}
 	</style>
 </head>
+
 <body>
 	<header class="header">header</header>
 	<nav class="nav">nav</nav>
 	<main>main</main>
 	<aside>aside</aside>
 	<footer>footer</footer>
+
+	<div class="grid-container">
+		<div class="item1">1</div>
+		<div class="item2">2</div>
+		<div class="item3">3</div>
+		<div class="item4">4</div>
+		<div class="item5">5</div>
+		<div class="item6">6</div>
+	</div>
 </body>
+
 </html>
