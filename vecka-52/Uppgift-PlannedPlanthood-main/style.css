@@ -213,6 +213,7 @@ body {
 	gap: 15rem;
 	align-items: center;
 	width: 100%;
+	/* max-width: var(--width-body-content); */
 	height: 3.6rem;
 }
 
@@ -222,6 +223,9 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	width: 9.5rem;
+	&:hover{
+		cursor: pointer;
+	}
 }
 
 .branding__logo {
@@ -242,8 +246,6 @@ body {
 .header__nav {
 	display: flex;
 	flex-direction: row;
-	/* justify-content: space-between; */
-	/* width: 30rem; */
 	gap: 4.5rem;
 }
 
@@ -282,6 +284,8 @@ body {
 	align-items: center;
 	justify-content: center;
 	gap: 1rem;
+	width: 100%;
+	max-width: var(--width-body-content);
 }
 
 .picture-section__title {}
@@ -296,48 +300,40 @@ body {
 	/* width: var(--width-body-content); */
 	padding: 1rem;
 	display: grid;
-	grid-template-areas: 
-	'large small-1 small-2 medium-1'
-	'large medium-2 medium-2 medium-3';
 	grid-template-columns: 2fr 1fr 1fr 2fr;
 	grid-template-rows: 1fr 1fr;
+	
 }
 
 .picture-item--1{
 	grid-row: span 2;
-	grid-area: 'large';
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
 
 .picture-item--2{
-	/* grid-area: 'small-1'; */
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
 .picture-item--3{
-	/* grid-area: 'small-2'; */
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
 .picture-item--4{
-	/* grid-area: 'medium-1'; */
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
 .picture-item--5{
-	/* grid-area: 'medium-2'; */
 	grid-column: span 2;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
 .picture-item--6{
-	/* grid-area: 'medium-3'; */
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
@@ -617,4 +613,27 @@ body {
 .footer__nav__item {
 	color: var(--clr-neutral-100);
 	font-weight: var(--fw-600);
+}
+
+/* media and container queries */
+.picture-section{
+	container: picture-container / inline-size;
+	/* container-type: inline-size; */
+}
+
+@container picture-container (width <= 800px){
+	.picture-container{
+		grid-template-columns: repeat(3,1fr);
+		grid-template-rows: 1fr 1fr;
+	}
+	.picture-item--1{
+		grid-row: span 1;
+	}
+	.picture-item--5{
+		grid-column: span 1;
+	}
+}
+
+@media (width <= 800px){
+
 }
