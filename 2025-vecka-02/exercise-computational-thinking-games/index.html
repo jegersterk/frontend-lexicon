@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body {
+			background-color: rgb(72, 72, 72);
+			color: white;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Computational Thinking Games</h1>
+	<section>
+		<h2>Instruktion:</h2>
+		<p>Utför de fyra datalogiska delprocesserna på nedanstående problem. Avsluta varje spel med att försöga skapa en
+			steg för steg-beskrivning av processen. Skapa därefter pseudokod som löser problemet.</p>
+	</section>
+	<section>
+		<h2>De fyra datalogiska delprocesserna:</h2>
+		<ol>
+			<li>Decomposition</li>
+			<li>Pattern Recognition</li>
+			<li>Abstraction</li>
+			<li>Algorithm Design</li>
+		</ol>
+	</section>
+	<section>
+		<h2>Stegen</h2>
+		<p>Ett tärningspel där användaren ska kasta 1st tärning. Vid första kastet ska målet vara 1. Om 1 ej fås, ska
+			man försöka igen. Hur många kast tar det för att komma upp i en stege, 1,2,3,4,5,6? Antal kast måste räknas.
+		</p>
+		<ol>
+			<li>Decomposition:
+				<ul>
+					<li>mål: slå korrekt nummer med tärning</li>
+					<li>det korrekta numret ändras efter korrekt slaget tärningsnummer</li>
+					<li>vid fel slaget tärningsnummer försöks det igen</li>
+					<li>korrekta numret vid ändring går stegvis uppåt från 1-6</li>
+					<li>en 6-sidig tärning slås</li>
+					<li>totala antal kast räknas</li>
+				</ul>
+			</li>
+			<li>Pattern Recognition:</li>
+			<li>Abstraction:
+				<p>Tärningen, stegen</p>
+			</li>
+			<li>Algorithm Design:
+				<ol>
+					<li>kasta tärning</li>
+					<li>totala antal kast nummer++</li>
+					<li>om fel tärningsnummer visas --> steg 1</li>
+					<li>om tärningsnummer motsvarar målnummer --> uppdatera målnummer++</li>
+					<li>om målnummer < 6 --> steg 1</6>
+					</li>
+					<li>om målnummer motsvarar 6 --> avsluta</li>
+				</ol>
+				<pre><code>
+	for(målNummer = 1; målNummer < 6; målNummer++){
+		while(tärning != målNummer){
+			kasta(tärning)
+			totalaKast++
+		}	
+	}
+					</code></pre>
+			</li>
+		</ol>
+	</section>
+	<section>
+		<h2>Knock out</h2>
+		<ul>
+			<li>
+				Spelet har 2st tärningar.
+			</li>
+			<li>
+				Du som spelare väljer ett “knock out number” – antingen 6, 7, 8, eller 9.</li>
+			<li>
+				Du som spelare väljer också vilken poäng som skall uppnås för att spelet skall avslutas.
+			</li>
+			<li>Spelaren kastar båda tärningarna. Anteckna varje kasts resultat.</li>
+			<li>
+				Om spelaren kastar det angivna "knock out number" så ges minuspoäng</li>
+		</ul>
+		<ol>
+			<li>Decomposition:
+				<p>Ovan</p>
+			</li>
+			<li>Pattern Recognition:</li>
+			<li>Abstraction:
+				<p>tärningar, knock-out number</p>
+			</li>
+			<li>Algorithm Design:
+				<ol>
+					<li>välj knock out number mellan 6-9</li>
+					<li>välj max score number som avslutar spelet om man uppnår det</li>
+					<li>kasta två tärningar</li>
+					<li>summera kastresultat</li>
+					<li>om kastresultat motsvarar ko-number --> kastresultat - ko-number</li>
+					<p>
+						pseudokod:
+					<pre>
+						<code>
+		const koNumber = 7
+		const maxScore = 50
+		let poäng = 0
+		while( poäng < maxScore){
+			if(kasta(tärningar(2)) == koNumber){
+				poäng -= koNumber
+			}
+			else{
+				kastresultat += kasta(tärningar(2))
+			}
+		}
+							</code>
+						</pre>
+					</p>
+				</ol>
+			</li>
+		</ol>
+
+	</section>
+	<section>
+		<h2>Going to Boston</h2>
+		<ol>
+			<li>Spelet har 3st tärningar.</li>
+			<li>Kasta tärningarna och spara tärningen med högsta värdet.</li>
+			<li>Kasta de kvarvarande 2 och spara tärningen med högsta värdet.</li>
+			<li>Kasta sista tärningen och summera samtliga tre tärningar.</li>
+			<li>Spelaren med högst summerat värde vinner. Max poäng är 18.</li>
+		</ol>
+		<ol>
+			<li>Decomposition:</li>
+			<li>Pattern Recognition:
+				<p>spelaren slår om tärningar för varje runda.
+					nästa spelare gör samma sak.
+				</p>
+			</li>
+			<li>Abstraction:</li>
+			<li>Algorithm Design:
+				<ol>
+					<li>spelare slår 3 tärningar</li>
+					<li>välj tärning med högst nummer och addera till spelares totala poäng</li>
+					<li>spelare slår 2 tärningar</li>
+					<li>välj tärning med högst nummer och addera till spelares totala poäng</li>
+					<li>spelare slår 2 tärningar</li>
+					<li>välj tärning med högst nummer och addera till spelares totala poäng</li>
+					<li>välj nästa spelare</li>
+					<li>upprepa steg 1-6</li>
+					<li>när alla spelare har spelat --> avsluta</li>
+				</ol>
+				<p>
+					pseudokod:
+					<pre>
+						<code>
+for(allaSpelare){
+	for(antalTärningar = 3; antalTärningar > 0; antalTärningar--){
+		resultat = kasta(tärningar(antalTärningar));
+		allaSpelare(nuvarandeSpelare) += max(resultat);
+	}
+}
+						</code>
+					</pre>
+				</p>
+			</li>
+		</ol>
+	</section>
+	<section>
+		<h2>Sten, sax och påse</h2>
+		<p>Skriv pseudokod för det klassiska spelet sten, sax och påse. Först till 3 vinster vinner!</p>
+		<pre>
+			<code>
+while(max(p1.score, p2.score) < 3){
+	p1.hand = inputValue1()
+	p2.hand = inputValue2()
+	resultat = (p2 - p1 + 3) % 3
+	if(resultat === 1){p1.score++}
+	elseif(resultat === 2){p2.score++}
+	else{continue;}
+}
+
+
+</code>
+		</pre>
+	</section>
+	<section>
+		<h2>Fizzbuzz</h2>
+		<p>
+			Loopa igenom hundra nummer och om:
+			<ul>
+				<li>Numret är dividerbart med 3, skriv ut "Fizz"</li>
+				<li>Numret är dividerbart med 5, skriv ut "Buzz"</li>
+				<li>Numret är dividerbart med 3 och 5, skriv ut "FizzBuzz"</li>
+			</ul>
+		</p>
+		<pre>
+			<code>
+while(number <= 100){
+	if(number % 3 == 0){console.log("Fizz")}
+	elseif(number % 5 == 0){console.log("Buzz")}
+	elseif(number % 5 == 0 || number % 3 == 0){
+		console.log("FizzBuzz")
+	}
+	number++
+}
+
+
+</code>
+		</pre>
+	</section>
+	<section>
+		<h2>Högt eller lågt</h2>
+		<p>Fråga användaren efter ett tal mellan 1 och 100. Programmet ska ha ett hemligt tal sparat. Det ska fortsätta fråga användaren till dess att användaren gissar det hemliga talet. Om man gissade för högt eller för lågt så ska det skrivas ut, så att användaren har en rimlig chans att klara det.</p>
+		<pre>
+			<code>
+while(användaresTal != hemligtTal){
+	användaresTal = inputNumber();
+	if(abs(användaresTal) > 100){
+		break;
+	}
+	if(användaresTal > hemligtTal){
+		console.log("FÖR HÖGT!")
+	}
+	elseif(användaresTal < hemligtTal){
+		console.log("FÖR LÅGT!")
+	}
+	else{console.log("RÄTT")}
+}
+
+
+</code>
+		</pre>
+	</section>
+	<section>
+		<h2>Söka efter likheter mellan ord</h2>
+		<p>Fråga användaren efter två ord, och kontrollera därefter hur många bokstäver som förekommer på samma plats i båda orden.</p>
+		<pre>
+			<code>
+ord_1 = inputWord();
+ord_2 = inputWord();
+tvåOrd = [ord_1 , ord_2];
+
+
+</code>
+		</pre>		
+	</section>
+
+	<script src="./index.js"></script>
+</body>
+
+</html>

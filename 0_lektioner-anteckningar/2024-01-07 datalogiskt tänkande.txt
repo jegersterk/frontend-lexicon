@@ -1,0 +1,8 @@
+fyra (6) områden i datalogiskt tänkande:
+1. decomposition (större delar till mindre)
+2. pattern recognition (återanvänding av function)
+3. abstraction (fokus på endast viktiga/relevanta saker)
+4. algorithm design (steg för steg instruktioner)
+5. logical reasoning (logical flowchart)
+6. evaluation (bra lösning eller förbättra?)
+https://www.youtube.com/watch?v=dHWmnayy8MY

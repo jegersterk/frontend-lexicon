@@ -568,7 +568,9 @@ body {
 	border-radius: calc(var(--height) * 0.5) / 50%;
 	/* border-radius: 1rem / 50%; */
 	margin-left: auto;
-
+	&:hover{
+		cursor: pointer;
+	}
 }
 
 .footer {
@@ -704,7 +706,7 @@ body {
 	}
 	.card-container {
 		grid-template-columns: repeat(2, 1fr);
-		justify-items:center;
+		/* justify-items:center; */
 	}
 	.card{
 		width:380px;
