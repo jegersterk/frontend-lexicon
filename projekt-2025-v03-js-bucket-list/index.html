@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bucket List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #bucketLists div {
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 0;
+    }
+    button {
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Min Bucket List</h1>
+  </header>
+  <main>
+    <form id="bucketForm">
+      <input type="text" id="activityName" placeholder="Vad vill du göra?" required />
+      <select id="activityCategory">
+        <option value="Resor">Resor</option>
+        <option value="Äventyr">Äventyr</option>
+        <option value="Lärande">Lärande</option>
+        <option value="Hobby">Hobby</option>
+      </select>
+      <button type="submit">Lägg till</button>
+    </form>
+    <section id="bucketLists"></section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

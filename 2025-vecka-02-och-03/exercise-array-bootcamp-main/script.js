@@ -136,38 +136,50 @@ console.log(fruits14);
 /* Sätt in, tre frukter i arrayen ovan på index 2. */
 console.log('Uppgift 15');
 let fruits15 = ['kiwi', 'apple', 'pear'];
-fruits15 = [...['banana, orange'],...fruits15.slice(1)]; 
+array15 = ['banana', 'orange', 'pineapple'];
+fruits15 = [...array15,...fruits15.slice(1)]; 
 console.log(fruits15.slice(0));
 
 /* 16 */
 /* let names = ['David', 'Christoffer', 'Johan', 'Maja'] */
 /* I arrayen ovan, ta bort Christoffer och Johan. */
 console.log('Uppgift 16');
+let names = ['David', 'Christoffer', 'Johan', 'Maja'];
+names.splice(1, 2);
+console.log(names);
 
 /* 17 */
 /* let nums = [1,2,3,4,5,6,7,8,9]; */
 /* Spegelvänd på arrayen ovan. */
 console.log('Uppgift 17');
+let nums = [1,2,3,4,5,6,7,8,9];
+nums.reverse();
+console.log(nums);
 
 /* 18 */
 /* let str = 'Supercalifragilisticexpialidocious'; */
 /* Kika om strängen ovan innehåller bokstaven n. */
 console.log('Uppgift 18');
+let str = 'Supercalifragilisticexpialidocious';
+console.log(str.includes("n"));
 
 /* 19 */
 /* let str = 'Supercalifragilisticexpialidocious'; */
 /* Kika om strängen ovan innehåller bokstaven x. */
 console.log('Uppgift 19');
+console.log(str.includes("x"));
 
 /* 20 */
 /* let str = 'Supercalifragilisticexpialidocious'; */
 /* I ovanstående sträng, hitta vilket position första förekomsten av p har. */
 console.log('Uppgift 20');
+console.log(str.indexOf("p"));  
 
 /* 21 */
 /* let str = 'Supercalifragilisticexpialidocious'; */
 /* I strängen ovan, plocka fram de 5 första tecknena. */
 console.log('Uppgift 21');
+
 
 /* 22 */
 /* let str = 'Supercalifragilisticexpialidocious'; */
