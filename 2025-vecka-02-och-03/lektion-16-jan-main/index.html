@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <form id="registerForm">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name">
+            <label for="isCute">Is cute:</label>
+            <input type="checkbox" id="isCute" checked>
+            <label for="breed">Breed:</label>
+            <select id="breed" name="breed">
+                <option value="Ragdoll">Ragdoll</option>
+                <option value="Birma">Birma</option>
+                <option value="Persian">Persian</option>
+            </select>
+            <div>
+                <p>Is vaccinated:</p>
+                <label for="radio-yes">Yes</label>
+                <input type="radio" name="radio" id="radio-yes">
+                <label for="radio-no">No</label>
+                <input type="radio" name="radio" id="radio-no">
+            </div>
+            <label for="date">Born:</label>
+            <input type="date" name="date" id="date">
+            <button type="submit" id="submit">Add cat</button>
+        </form>
+    </main>
+</body>
+
+</html>

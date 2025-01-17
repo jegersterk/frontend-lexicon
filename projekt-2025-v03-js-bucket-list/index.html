@@ -4,11 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bucket List</title>
+  <link rel="stylesheet" href="./index.css">
+  <script src="./index.js" defer></script>
   <style>
     body {
       font-family: Arial, sans-serif;
+	  background-color: bisque;
     }
-    #bucketLists div {
+    #bucketLists .container{
+		color: white;
+		background-color: rgb(164, 125, 75);
       margin-bottom: 20px;
     }
     ul {
@@ -32,7 +37,7 @@
   </header>
   <main>
     <form id="bucketForm">
-      <input type="text" id="activityName" placeholder="Vad vill du göra?" required />
+      <input required type="text" id="activityName" placeholder="Vad vill du göra?" required/>
       <select id="activityCategory">
         <option value="Resor">Resor</option>
         <option value="Äventyr">Äventyr</option>
@@ -43,6 +48,5 @@
     </form>
     <section id="bucketLists"></section>
   </main>
-  <script src="script.js"></script>
 </body>
 </html>
