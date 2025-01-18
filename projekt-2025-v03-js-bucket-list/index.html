@@ -1,52 +1,93 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bucket List</title>
-  <link rel="stylesheet" href="./index.css">
-  <script src="./index.js" defer></script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-	  background-color: bisque;
-    }
-    #bucketLists .container{
-		color: white;
-		background-color: rgb(164, 125, 75);
-      margin-bottom: 20px;
-    }
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    li {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 5px 0;
-    }
-    button {
-      margin-left: 10px;
-    }
-  </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bucket List</title>
+	<link rel="stylesheet" href="./index.css">
+	<script src="./index.js" defer></script>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: bisque;
+		}
+
+		#bucketLists .container {
+			color: white;
+			background-color: rgb(164, 125, 75);
+			margin-bottom: 20px;
+		}
+
+		ul {
+			list-style-type: none;
+			padding: 0;
+		}
+
+		li {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 5px 0;
+		}
+
+		.checkbox {
+			width: 2rem;
+			height: 2rem;
+			border: solid 1px;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		.checkbox--v {
+			background-color: rgb(66, 147, 52);
+			&:hover {
+				background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"%3E%3Cpath d="M20 50 L40 70 L80 30" stroke="grey" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E');
+			}
+		}
+
+		.checkbox--x {
+			background-color: rgb(174, 23, 23);
+
+			&:hover {
+				background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"%3E%3Cline x1="20" y1="20" x2="80" y2="80" stroke="red" stroke-width="8" stroke-linecap="round"/%3E%3Cline x1="80" y1="20" x2="20" y2="80" stroke="red" stroke-width="8" stroke-linecap="round"/%3E%3C/svg%3E');
+			}
+		}
+
+		.clicked {
+			background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"%3E%3Cpath d="M20 50 L40 70 L80 30" stroke="white" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E');
+			object-fit: contain;
+			&:hover {
+				background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"%3E%3Cpath d="M20 50 L40 70 L80 30" stroke="white" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E');
+			}
+		}
+
+		button {
+			margin-left: 10px;
+		}
+	</style>
 </head>
+
 <body>
-  <header>
-    <h1>Min Bucket List</h1>
-  </header>
-  <main>
-    <form id="bucketForm">
-      <input required type="text" id="activityName" placeholder="Vad vill du göra?" required/>
-      <select id="activityCategory">
-        <option value="Resor">Resor</option>
-        <option value="Äventyr">Äventyr</option>
-        <option value="Lärande">Lärande</option>
-        <option value="Hobby">Hobby</option>
-      </select>
-      <button type="submit">Lägg till</button>
-    </form>
-    <section id="bucketLists"></section>
-  </main>
+	<header>
+		<h1>Min Bucket List</h1>
+	</header>
+	<main>
+		<form id="bucketForm">
+			<input required type="text" id="activityName" placeholder="Vad vill du göra?" required />
+			<select id="activityCategory">
+				<option value="Resor">Resor</option>
+				<option value="Äventyr">Äventyr</option>
+				<option value="Lärande">Lärande</option>
+				<option value="Hobby">Hobby</option>
+			</select>
+			<button type="submit">Lägg till</button>
+		</form>
+		<section id="bucketLists">
+		</section>
+	</main>
 </body>
+
 </html>
