@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucket List</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <h2>MIN 2025</h2>
+        <h1 class="homemade-apple-regular">Bucket List</h1>
+        <h2>INSPO</h2>
+    </header>
+    <main>
+        <form id="bucketForm">
+            <input type="text" id="activityName" placeholder="Vad vill du göra?" required />
+            <select id="activityCategory">
+                <option value="Resor">Resor</option>
+                <option value="Äventyr">Äventyr</option>
+                <option value="Lärande">Lärande</option>
+                <option value="Hobby">Hobby</option>
+                <option value="Katter">Katter</option>
+            </select>
+            <button type="submit">Lägg till</button>
+        </form>
+        <section id="bucketLists"></section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

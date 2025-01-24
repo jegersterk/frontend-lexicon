@@ -18,7 +18,7 @@ form.onsubmit = (event) => {
 		bucketListContainer.appendChild(bucketList);
 	}
 
-	const bucketListContainer = document.getElementById(select.value)
+	const bucketListContainer = document.getElementById(select.value);
 	const bucketList = document.querySelector(`#${select.value} ul`);
 	const bucketListItem = document.createElement("li");
 	const v = document.createElement("span");
