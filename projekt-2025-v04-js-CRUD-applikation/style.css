@@ -1,0 +1,108 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+:root{
+	--font-theme: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	
+	--font-size-header: 1.5rem;
+	--font-weight-header: 400;
+
+
+	--clr-font-light-theme: rgb(0, 0, 0);
+	--clr-font-dark-theme: rgb(255, 255, 255);
+
+	--clr-font-body: rgb(255, 255, 255);
+	--clr-font-header: rgb(255, 255, 255);
+	--clr-font-header-nav: rgb(0, 0, 0);
+	--clr-font-header-hover: rgb(255, 255, 255);
+
+	--clr-bg-body: rgb(10, 46, 10);
+	--clr-bg-main-blocks: rgb(12, 63, 12);
+
+	--clr-bg-header-hover: rgb(10, 46, 10);
+
+	--object-size-width-page: 86rem;
+	--object-size-width-page: 100%;
+}
+
+body{
+	/* margin: 0%; */
+	background-color: var(--clr-bg-body);
+	font-family: var(--font-theme);
+	color: var(--clr-font-body);
+}
+
+
+.header{
+	background-color: var(--clr-bg-main-blocks);
+	font-size: var(--font-size-header);
+	display: flex;
+	justify-content: center;
+	height: 10rem;
+}
+.header__content{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	width: var(--object-size-width-page);
+}
+
+.header__svg{
+	flex: none;
+}
+
+.header__branding{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 32rem;
+	height: 100%;
+	&:hover{
+		cursor: pointer;
+	}
+}
+
+.header__title{
+	/* color: var(--clr-font-header); */
+}
+
+.header__nav{
+	/* width: 50%; */
+	width: 32rem;
+	height: 100%;
+	/* align-items: center; */
+}
+
+.header__nav__list{
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	margin-right: auto;
+	justify-content:end;
+	/* flex-direction: row-reverse; */
+	list-style-type: none;
+	/* align-items: center; */
+}
+
+.header__nav__list__item{
+	height: 100%;
+	/* text-align: center; */
+	align-content: center;
+	/* background-color: aqua; */
+	padding: 0 3rem;
+	margin: 0;
+	&:hover{
+		cursor: pointer;
+		color: var(--clr-font-header-hover);
+		background-color: var(--clr-bg-header-hover);
+	}
+}
+
+.footer{
+	background-color: var(--clr-bg-main-blocks);
+	height: 10rem;
+}

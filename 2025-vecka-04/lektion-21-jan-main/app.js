@@ -3,6 +3,7 @@ const API_URL = "https://ghibliapi.vercel.app/films/";
 const fetchMovies = async () => {
     try {
         const response = await fetch(API_URL);
+		// const response = fetch(API_URL); 
         if (!response.ok) {
             throw new Error(`HTTP error, status code: ${response.status}`);
         }
