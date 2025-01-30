@@ -41,6 +41,7 @@ body{
 	display: flex;
 	justify-content: center;
 	height: 10rem;
+	user-select: none;
 }
 .header__content{
 	display: flex;
@@ -100,6 +101,12 @@ body{
 		color: var(--clr-font-header-hover);
 		background-color: var(--clr-bg-header-hover);
 	}
+}
+
+.main{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .footer{

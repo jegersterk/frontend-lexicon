@@ -28,7 +28,6 @@ formEl.addEventListener("submit", (event) => {
 
 async function fetchImages(query, imageCount) {
     const endpoint = `https://api.unsplash.com/search/collections?page=${page}&query=${query}&client_id=${ACCESS_KEY}&per_page=${imageCount}`;
-
     try {
         const response = await fetch(endpoint);
         if (!response.ok) {
