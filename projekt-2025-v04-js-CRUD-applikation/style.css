@@ -20,11 +20,14 @@
 
 	--clr-bg-body: rgb(10, 46, 10);
 	--clr-bg-main-blocks: rgb(12, 63, 12);
-
 	--clr-bg-header-hover: rgb(10, 46, 10);
 
+	--clr-border-image: rgb(162, 143, 4);
+
 	--object-size-width-page: 86rem;
-	--object-size-width-page: 100%;
+	/* --object-size-width-page: 100%; */
+	--object-size-width-game-div--small: 30rem;
+	--object-size-height-game-div--small: 20rem
 }
 
 body{
@@ -105,11 +108,54 @@ body{
 
 .main{
 	display: flex;
+
+justify-content: center;
+align-items: center;
+width: 100%;
+}
+
+.main__container{
+	/* margin-left: auto; */
+	width: var(--object-size-width-page);
+}
+
+.games-list{
+	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.game-div--small{
+	
+	width: var(--object-size-width-game-div--small);
+	height: var(--object-size-height-game-div--small);
+	/* object-fit: cover; */
+	background-size: var(--object-size-width-game-div--small);
+	margin: 1rem;
+	/* background-color: brown; */
+}
+
+.game-div--small__image{
+	box-sizing: border-box;
+	/* max-width: 100%; */
+	/* max-height: 100%; */
+	width: 100%;
+	height: 86%;
+	/* object-fit: contain; */
+	background-size: 100% 100%;
+	/* background-size: cover; */
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	box-shadow: 0 0 0 5px var(--clr-border-image);
+}
+
+.game-div--small__name{
+
 }
 
 .footer{
 	background-color: var(--clr-bg-main-blocks);
 	height: 10rem;
+	
 }

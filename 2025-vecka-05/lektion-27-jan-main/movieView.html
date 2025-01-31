@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min filmsamling</title>
+    <script src="movieView.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1 id="header-title">Titel på film</h1>
+        <label for="seen">
+            Sett:
+            <input type="checkbox" name="seenCheckbox" id="seen">
+        </label>
+    </header>
+    <main>
+        <img id="movie-image">
+        <p id="movie-rtRating"></p>
+        <h4>Beskrivning:</h4>
+        <p id="movie-description"></p>
+        <p id="movie-rating">1/5</p>
+        <select id="movie-rating-select">
+            <option value="1">1/5</option>
+            <option value="2">2/5</option>
+            <option value="3">3/5</option>
+            <option value="4">4/5</option>
+            <option value="5">5/5</option>
+        </select>
+    </main>
+</body>
+
+</html>
