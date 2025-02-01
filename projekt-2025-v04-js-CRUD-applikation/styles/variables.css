@@ -1,0 +1,36 @@
+:root{
+	/* global variables */
+	--font-theme: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	
+	--font-size-header: 1.5rem;
+	--font-size-list-title: 2rem;
+	--font-weight-header: 400;
+
+	/* --clr-font-light-theme: rgb(0, 0, 0); */
+	/* --clr-font-dark-theme: rgb(255, 255, 255); */
+
+	--clr-font-body: rgb(255, 255, 255);
+	--clr-font-header: rgb(255, 255, 255);
+	--clr-font-header-nav: rgb(0, 0, 0);
+	--clr-font-header-hover: rgb(255, 255, 255);
+
+	--clr-bg-body: rgb(10, 46, 10);
+	--clr-bg-main-blocks: rgb(12, 63, 12);
+	--clr-bg-header-hover: rgb(10, 46, 10);
+
+	--object-size-width-page: 86rem;
+
+	/* index.html */
+	--clr-border-image: rgb(162, 143, 4);
+	--clr-border-image-game-div--long:rgb(16, 176, 35);
+
+	--object-size-width-game-div--small: 20rem;
+	--object-size-height-game-div--small: 14rem;
+
+	/* games.html */
+	--object-size-width-game-div--long: 60rem;
+	--object-size-height-game-div--long: 6rem;
+	--object-size-width-game-div--long__image: 12rem;
+	--object-size-height-game-div--long__image: 6rem;
+
+}

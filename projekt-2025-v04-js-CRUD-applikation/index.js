@@ -1,6 +1,7 @@
 import API_KEY from "./api-key.js";
 let endpoint = `https://api.rawg.io/api/games?page_size=24&key=${API_KEY}&page=1&ordering=-added`;
 let games = null;
+// ordering: name, released, added, created, updated, rating, metacritic
 
 const gamesList = document.getElementsByClassName("games-list")[0]
 

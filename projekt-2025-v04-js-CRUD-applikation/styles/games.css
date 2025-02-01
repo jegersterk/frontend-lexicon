@@ -1,0 +1,106 @@
+.main{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.main__container{
+	/* margin-left: auto; */
+	width: var(----object-size-width-page);
+	margin: 5rem;
+	display: flex;
+	flex-direction: row;
+}
+
+.main__container__title{
+	margin: 0 auto 0 auto;
+	text-align: center;
+	font-size: var(--font-size-list-title);
+}
+
+.ui-aside{
+	display: flex;
+	flex-direction: column;
+	width: 10rem;
+	background-color: rgb(59, 82, 66);
+}
+
+.ui-aside__button--add-to-list{
+	width: 100%;
+	height: 10rem;
+	background-color: cadetblue;
+	border: none;
+	&:hover{
+		background-color: blueviolet;
+	}
+}
+
+.games-list{
+	display: flex;
+	flex-direction: column;
+}
+
+.game-div--long{
+	display: flex;
+	flex-direction: row;
+	border: solid rgb(76, 124, 89) 2px;
+	/* display: flex; */
+	width: var(--object-size-width-game-div--long);
+	height: var(--object-size-height-game-div--long);
+	background-size: var(--object-size-width-game-div--long);
+	margin: 0.2rem;
+	background-color: rgb(130, 108, 69);
+
+	-khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+
+}
+
+.game-div--long:nth-child(2n){
+	background-color: rgb(130, 70, 30);
+}
+
+.game-div--long__check{
+	width: var(--object-size-height-game-div--long);
+	height: 100%;
+	background-color: rgb(95, 95, 95);
+	&:hover{
+		cursor: pointer;
+	}
+}
+
+.game-div--long__check--checked{
+	background-color: rgb(25, 170, 25);
+}
+
+.game-div--long__image{
+	box-sizing: border-box;
+	max-width: var(--object-size-width-game-div--long);
+	max-height: var(--object-size-height-game-div--long);
+	width: var(--object-size-width-game-div--long__image);
+	height: var(--object-size-height-game-div--long__image);
+	background-size: 100% 100%;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	box-shadow: 0 0 0 2px var(--clr-border-image-game-div--long);
+
+	-khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.game-div--long__info{
+	/* background-color: blueviolet; */
+	display: flex;
+	flex-direction: column;
+	margin-left: 10%;
+}
+
+.game-div--long__name{
+
+}
