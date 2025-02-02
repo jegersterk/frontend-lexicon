@@ -56,7 +56,6 @@
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
-
 }
 
 .game-div--long:nth-child(2n){
