@@ -43,7 +43,7 @@
 .game-div--long{
 	display: flex;
 	flex-direction: row;
-	border: solid rgb(76, 124, 89) 2px;
+	border: solid rgb(130, 108, 69);
 	/* display: flex; */
 	width: var(--object-size-width-game-div--long);
 	height: var(--object-size-height-game-div--long);
@@ -61,6 +61,7 @@
 
 .game-div--long:nth-child(2n){
 	background-color: rgb(130, 70, 30);
+	border: solid 2px rgb(130, 70, 30);
 }
 
 .game-div--long__check{

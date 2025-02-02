@@ -13,6 +13,11 @@ async function fetchGames() {
 		}
 		const fetchedGames = await response.json();
 		console.log(fetchedGames);
+
+		displayGames(fetchedGames.results);
+		buttonCheckEvent(fetchedGames.results);
+		addToLocalStorage(fetchedGames.results);
+
 		return fetchedGames;
 	} catch (error) {
 		console.error("An error came up: ", error);
@@ -54,16 +59,39 @@ function generateGameDivLong(game){
 
 function buttonCheckEvent(games){
 	const gameDivLongCheck = document.getElementsByClassName("game-div--long__check");
-	
+	games.forEach((game,index) => {
+		gameDivLongCheck[index].id = game["id"];
+	})
 	Array.from(gameDivLongCheck).forEach(element => element.addEventListener("click", () => {
-		element.classList.toggle("game-div--long__check--checked");
-		console.log("clicked");
+		console.log(games.find(obj => obj["id"] == element.id).name);
+		const gameObj = games.find(obj => obj["id"] == element.id);
+		const key = "selected";
+		gameObj[key] = !gameObj[key];
+		if(gameObj[key]){
+			element.classList.add("game-div--long__check--checked");
+		}else{
+			element.classList.remove("game-div--long__check--checked");
+		}
+		console.log(games);
 	}))
 }
+
+function addToLocalStorage(games){
+	const button = document.getElementsByClassName("ui-aside__button--add-to-list")[0];
+	button.addEventListener("click", () => {
+		
+		const selectedGames = games.filter(game => {if(game["selected"]){return game;}});
+		selectedGames.forEach(game => localStorage.setItem(game["id"],JSON.stringify(game)));
+		console.log(selectedGames);
+		// localStorage.setItem("",selectedGames);
+		// console.log("hello: ",games);
+	});
+}
+
 fetchGames()
-	.then((value) => {games = value.results})
-	.then(() => displayGames(games))
-	.then(() => buttonCheckEvent(games));
+	// .then((value) => {games = value.results})
+	// .then(() => {displayGames(games); buttonCheckEvent(games); console.log(games)});
+	// .then(() => buttonCheckEvent(games));
 
 
 
