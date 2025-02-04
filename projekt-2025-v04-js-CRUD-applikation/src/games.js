@@ -1,10 +1,8 @@
 import API_KEY from "./api-key.js";
 let endpoint = `https://api.rawg.io/api/games?page_size=24&key=${API_KEY}&page=1&ordering=-added`;
-let games = null;
 // ordering: name, released, added, created, updated, rating, metacritic
 
-const gamesList = document.getElementsByClassName("games-list")[0]
-
+// fetches games from api and implements all the other functions
 async function fetchGames() {
 	try {
 		const response = await fetch(endpoint);
@@ -15,20 +13,23 @@ async function fetchGames() {
 		console.log(fetchedGames);
 
 		displayGames(fetchedGames.results);
-		buttonCheckEvent(fetchedGames.results);
-		addToLocalStorage(fetchedGames.results);
+		checkButton(fetchedGames.results);
+		addToMyList(fetchedGames.results);
 
 		return fetchedGames;
 	} catch (error) {
-		console.error("An error came up: ", error);
+		console.error(error);
 	}
 }
 
+// displays games on the game-list html object
 function displayGames(games){
-	games.forEach(game => generateGameDivLong(game))
+	const gamesList = document.getElementsByClassName("games-list")[0];
+	games.forEach(game => generateGameDivLong(game, gamesList))
 }
 
-function generateGameDivLong(game){
+// generates all html objects for the game
+function generateGameDivLong(game, gamesList){
 	const gameDivLong = document.createElement("div");
 	gameDivLong.className = "game-div--long";
 	gamesList.appendChild(gameDivLong);
@@ -57,13 +58,14 @@ function generateGameDivLong(game){
 	gameDivLongInfo.appendChild(gameDivLongDateRelease);
 }
 
-function buttonCheckEvent(games){
+// gives all check buttons for each individual game the function that give value "selected".
+// selected buttons turns green on click
+function checkButton(games){
 	const gameDivLongCheck = document.getElementsByClassName("game-div--long__check");
 	games.forEach((game,index) => {
 		gameDivLongCheck[index].id = game["id"];
 	})
 	Array.from(gameDivLongCheck).forEach(element => element.addEventListener("click", () => {
-		console.log(games.find(obj => obj["id"] == element.id).name);
 		const gameObj = games.find(obj => obj["id"] == element.id);
 		const key = "selected";
 		gameObj[key] = !gameObj[key];
@@ -72,26 +74,20 @@ function buttonCheckEvent(games){
 		}else{
 			element.classList.remove("game-div--long__check--checked");
 		}
-		console.log(games);
 	}))
 }
 
-function addToLocalStorage(games){
+// button that adds all selected games to local storage
+function addToMyList(games){
 	const button = document.getElementsByClassName("ui-aside__button--add-to-list")[0];
 	button.addEventListener("click", () => {
-		
 		const selectedGames = games.filter(game => {if(game["selected"]){return game;}});
 		selectedGames.forEach(game => localStorage.setItem(game["id"],JSON.stringify(game)));
 		console.log(selectedGames);
-		// localStorage.setItem("",selectedGames);
-		// console.log("hello: ",games);
 	});
 }
 
-fetchGames()
-	// .then((value) => {games = value.results})
-	// .then(() => {displayGames(games); buttonCheckEvent(games); console.log(games)});
-	// .then(() => buttonCheckEvent(games));
+fetchGames();
 
 
 

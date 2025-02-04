@@ -1,18 +1,21 @@
-
+// const gamesList = document.getElementsByClassName("games-list")[0];
 
 function displayGames(games){
-	games.forEach(game => generateGameDivLong(game))
+	const gamesList = document.getElementsByClassName("games-list")[0];
+	games.forEach(game => {
+		generateGameDivLong(game, gamesList);
+	})
 }
 
-function generateGameDivLong(game) {
-	const gamesList = document.getElementsByClassName("games-list")[0];
-
+function generateGameDivLong(game, gamesList) {
 	const gameDivLong = document.createElement("div");
 	gameDivLong.className = "game-div--long";
+	gameDivLong.id = game["id"];
 	gamesList.appendChild(gameDivLong);
 
 	const gameDivLongDelete = document.createElement("div");
 	gameDivLongDelete.className = "game-div--long__delete";
+	gameDivLongDelete.id = game["id"];
 	gameDivLong.appendChild(gameDivLongDelete);
 
 	const gameDivLongImage = document.createElement("img");
@@ -38,7 +41,6 @@ function generateGameDivLong(game) {
 function getGamesFromLocalStorage() {
 	let games = [];
 	for (let i = 0; i < localStorage.length; i++) {
-		console.log(localStorage.key(i));
 		let gameObjKey = localStorage.key(i);
 		gameObj = localStorage.getItem(gameObjKey);
 		games[i] = JSON.parse(gameObj);
@@ -46,25 +48,15 @@ function getGamesFromLocalStorage() {
 	return games;
 }
 
-// unfinished
-function deleteGame(){
+function deleteGameFromList(){
 	const gameDivLongDelete = document.getElementsByClassName("game-div--long__delete");
-	// games.forEach((game,index) => {
-	// 	gameDivLongDelete[index].id = game["id"];
-	// })
 	Array.from(gameDivLongDelete).forEach(element => element.addEventListener("click", () => {
-		console.log(games.find(obj => obj["id"] == element.id).name);
-		const gameObj = games.find(obj => obj["id"] == element.id);
-		const key = "selected";
-		gameObj[key] = !gameObj[key];
-		if(gameObj[key]){
-			element.classList.add("game-div--long__check--checked");
-		}else{
-			element.classList.remove("game-div--long__check--checked");
-		}
-		console.log(games);
+		document.getElementById(element.id).remove();
+		localStorage.removeItem(element.id);
+		console.log(element.id)
 	}))
 }
 
 const games = getGamesFromLocalStorage();
 displayGames(games);
+deleteGameFromList();
