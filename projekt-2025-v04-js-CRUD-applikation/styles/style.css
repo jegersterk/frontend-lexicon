@@ -65,6 +65,8 @@ body{
 	justify-content: space-between;
 	width: 32rem;
 	height: 100%;
+	color: white;
+	text-decoration: none;
 	&:hover{
 		cursor: pointer;
 	}
@@ -97,10 +99,12 @@ body{
 	align-content: center;
 	padding: 0 3rem;
 	margin: 0;
+	text-decoration: none;
 	&:hover{
 		cursor: pointer;
 		color: var(--clr-font-header-hover);
 		background-color: var(--clr-bg-header-hover);
+		text-decoration-line: underline;
 	}
 	&:visited{
 		color: white;

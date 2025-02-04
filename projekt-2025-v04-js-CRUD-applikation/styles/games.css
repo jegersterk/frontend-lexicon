@@ -26,12 +26,15 @@
 }
 
 .ui-aside__button--add-to-list{
+	font-size: 1.2rem;
+	font-weight: 700;
 	width: 100%;
 	height: 10rem;
 	background-color: cadetblue;
 	border: none;
 	&:hover{
 		background-color: blueviolet;
+		cursor: pointer;
 	}
 }
 

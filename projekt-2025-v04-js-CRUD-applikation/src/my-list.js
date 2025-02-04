@@ -1,6 +1,7 @@
 // const gamesList = document.getElementsByClassName("games-list")[0];
 
 function displayGames(games){
+	console.log(games);
 	const gamesList = document.getElementsByClassName("games-list")[0];
 	games.forEach(game => {
 		generateGameDivLong(game, gamesList);
