@@ -22,7 +22,7 @@
 	display: flex;
 	flex-direction: column;
 	width: 10rem;
-	background-color: rgb(59, 82, 66);
+	background-color: var(--clr-bg-body);
 }
 
 .ui-aside__button--add-to-list{
@@ -30,10 +30,12 @@
 	font-weight: 700;
 	width: 100%;
 	height: 10rem;
-	background-color: cadetblue;
-	border: none;
+	background-color: rgb(60, 62, 119);
+	border: solid grey 2px;
+	color: white;
 	&:hover{
-		background-color: blueviolet;
+		background-color: rgb(102, 190, 70);
+		color: black;
 		cursor: pointer;
 	}
 }
@@ -70,13 +72,19 @@
 	width: var(--object-size-height-game-div--long);
 	height: 100%;
 	background-color: rgb(95, 95, 95);
+	color: var(--clr-bg-game-div--long__check--checked);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 3rem;
+	font-weight: 700;
 	&:hover{
 		cursor: pointer;
 	}
 }
 
 .game-div--long__check--checked{
-	background-color: rgb(25, 170, 25);
+	background-color: var(--clr-bg-game-div--long__check--checked);
 }
 
 .game-div--long__image{

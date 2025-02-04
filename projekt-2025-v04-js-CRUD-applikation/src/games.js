@@ -9,13 +9,13 @@ async function fetchGames() {
 		if (!response.ok) {
 			throw new Error(`HTTP error, status code: ${response.status}`);
 		}
+		
 		const fetchedGames = await response.json();
-		console.log(fetchedGames);
-
 		displayGames(fetchedGames.results);
 		checkButton(fetchedGames.results);
 		addToMyList(fetchedGames.results);
-
+		
+		console.log(fetchedGames);
 		return fetchedGames;
 	} catch (error) {
 		console.error(error);
@@ -36,6 +36,7 @@ function generateGameDivLong(game, gamesList){
 
 	const gameDivLongCheck = document.createElement("div");
 	gameDivLongCheck.className = "game-div--long__check";
+	gameDivLongCheck.textContent = "+";
 	gameDivLong.appendChild(gameDivLongCheck);
 
 	const gameDivLongImage = document.createElement("img");
@@ -79,7 +80,12 @@ function checkButton(games){
 
 // button that adds all selected games to local storage
 function addToMyList(games){
-	const button = document.getElementsByClassName("ui-aside__button--add-to-list")[0];
+	const button = document.createElement("button");
+	button.textContent = "Click to add all marked to your list";
+	button.className = "ui-aside__button--add-to-list";
+	document.getElementsByClassName("ui-aside")[0].appendChild(button);
+
+	// const button = document.getElementsByClassName("ui-aside__button--add-to-list")[0];
 	button.addEventListener("click", () => {
 		const selectedGames = games.filter(game => {if(game["selected"]){return game;}});
 		selectedGames.forEach(game => localStorage.setItem(game["id"],JSON.stringify(game)));
@@ -87,7 +93,7 @@ function addToMyList(games){
 	});
 }
 
-fetchGames();
+fetchGames()
 
 
 

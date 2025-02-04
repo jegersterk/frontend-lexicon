@@ -14,17 +14,18 @@
 	--clr-bg-body: rgb(10, 46, 10);
 	--clr-bg-main-blocks: rgb(12, 63, 12);
 	--clr-bg-header-hover: rgb(10, 46, 10);
+	--clr-bg-game-div--long__check--checked: rgb(25, 170, 25);
 
 	--object-size-width-page: 86rem;
 
-	/* index.html */
+	/* index html */
 	--clr-border-image: rgb(162, 143, 4);
 	--clr-border-image-game-div--long:rgb(16, 176, 35);
 
 	--object-size-width-game-div--small: 20rem;
 	--object-size-height-game-div--small: 14rem;
 
-	/* games.html */
+	/* games html */
 	--object-size-width-game-div--long: 60rem;
 	--object-size-height-game-div--long: 6rem;
 	--object-size-width-game-div--long__image: 12rem;

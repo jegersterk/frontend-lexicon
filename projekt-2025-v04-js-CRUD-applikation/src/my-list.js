@@ -16,6 +16,7 @@ function generateGameDivLong(game, gamesList) {
 
 	const gameDivLongDelete = document.createElement("div");
 	gameDivLongDelete.className = "game-div--long__delete";
+	gameDivLongDelete.textContent = "-";
 	gameDivLongDelete.id = game["id"];
 	gameDivLong.appendChild(gameDivLongDelete);
 
