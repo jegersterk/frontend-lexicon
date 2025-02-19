@@ -1,0 +1,16 @@
+i terminal:
+npx create-next-app@latest,
+npm run dev (kör i dev)
+
+uppgift:
+Ändra bakgrundsfärg på body 
+Lägg till en padding och en rundad ram runt main-elementet 
+Ändra font på list items till en ny mono font och all annan text till en annan icke-mono font 
+Ändra titel på sidan så den nya syns på fliken i webbläsaren (meta) 
+Lägg till ny valfri text mellan knapparna och listan 
+Lägg till en bild ovanför den nya texten som är hämtad från extern källa (ex från https://loremflickr.com/) 
+Lägg till en bild under Next.js bilden som är nedladdad lokalt och placerad i mappen för statiskt innehåll 
+ 
+LoremFlickr.com
+LoremFlickr is a service that provides free placeholder images for web and print.
+ 
